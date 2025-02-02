@@ -113,6 +113,4 @@ def train(
         print(f"    Validation accuracy: {validation_accuracy:.2f}")
 
     return train_losses, val_losses, train_accuracies, val_accuracies
-
-
-
+    
