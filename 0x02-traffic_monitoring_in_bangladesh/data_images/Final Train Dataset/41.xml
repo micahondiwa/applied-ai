@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Images</folder>
+	<filename>83367684_596713257542294_3443879368353382400_n.jpg</filename>
+	<path>E:\Datasets\Dataset\Images\83367684_596713257542294_3443879368353382400_n.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>960</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bus</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>444</xmin>
+			<ymin>249</ymin>
+			<xmax>562</xmax>
+			<ymax>388</ymax>
+		</bndbox>
+	</object>
+</annotation>

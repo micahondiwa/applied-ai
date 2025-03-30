@@ -1,0 +1,50 @@
+<annotation>
+	<folder>annotationimageframes_3</folder>
+	<filename>Dipto_ 250.jpg</filename>
+	<path>C:\Users\ASUS\Desktop\annotationimageframes_3\Dipto_ 250.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>human hauler</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>307</xmin>
+			<ymin>566</ymin>
+			<xmax>1167</xmax>
+			<ymax>1023</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>car</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>9</xmin>
+			<ymin>743</ymin>
+			<xmax>283</xmax>
+			<ymax>1019</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>motorbike</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1627</xmin>
+			<ymin>791</ymin>
+			<xmax>1856</xmax>
+			<ymax>882</ymax>
+		</bndbox>
+	</object>
+</annotation>

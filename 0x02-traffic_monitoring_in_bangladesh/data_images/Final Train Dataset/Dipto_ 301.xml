@@ -1,0 +1,38 @@
+<annotation>
+	<folder>annotationimageframes_4</folder>
+	<filename>Dipto_ 301.jpg</filename>
+	<path>C:\Users\ASUS\Desktop\annotationimageframes_4\Dipto_ 301.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bus</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>454</xmin>
+			<ymin>382</ymin>
+			<xmax>789</xmax>
+			<ymax>751</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>truck</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>798</xmin>
+			<ymin>496</ymin>
+			<xmax>836</xmax>
+			<ymax>544</ymax>
+		</bndbox>
+	</object>
+</annotation>

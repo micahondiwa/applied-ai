@@ -1,0 +1,50 @@
+<annotation>
+	<folder>annotationimageframes_2</folder>
+	<filename>Dipto_ 128.jpg</filename>
+	<path>C:\Users\ASUS\Desktop\annotationimageframes_2\Dipto_ 128.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1680</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>minivan</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1057</xmin>
+			<ymin>678</ymin>
+			<xmax>1434</xmax>
+			<ymax>860</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>truck</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>748</xmin>
+			<ymin>678</ymin>
+			<xmax>905</xmax>
+			<ymax>795</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>bus</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>616</xmin>
+			<ymin>704</ymin>
+			<xmax>651</xmax>
+			<ymax>740</ymax>
+		</bndbox>
+	</object>
+</annotation>

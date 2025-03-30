@@ -1,0 +1,26 @@
+<annotation>
+	<folder>New folder (2)</folder>
+	<filename>20200126_170847.jpg</filename>
+	<path>C:\Users\ASUS\Desktop\New folder (2)\20200126_170847.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>4160</width>
+		<height>3120</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>car</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1358</xmin>
+			<ymin>607</ymin>
+			<xmax>3896</xmax>
+			<ymax>1659</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,50 @@
+<annotation>
+	<folder>Images</folder>
+	<filename>83845282_796854114166523_3508997716875149312_n.jpg</filename>
+	<path>D:\Datasets\Dataset\Images\83845282_796854114166523_3508997716875149312_n.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>960</width>
+		<height>540</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>three wheelers (CNG)</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>389</xmin>
+			<ymin>287</ymin>
+			<xmax>453</xmax>
+			<ymax>364</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>three wheelers (CNG)</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>173</xmin>
+			<ymin>287</ymin>
+			<xmax>280</xmax>
+			<ymax>378</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>wheelbarrow</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>490</xmin>
+			<ymin>298</ymin>
+			<xmax>524</xmax>
+			<ymax>334</ymax>
+		</bndbox>
+	</object>
+</annotation>

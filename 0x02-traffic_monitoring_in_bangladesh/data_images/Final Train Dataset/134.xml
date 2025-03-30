@@ -1,0 +1,50 @@
+<annotation>
+	<folder>XML project AI</folder>
+	<filename>86720501_195975361516240_7013359669389295616_n.jpg</filename>
+	<path>E:\9th Semester\XML project AI\86720501_195975361516240_7013359669389295616_n.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>2304</width>
+		<height>4096</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bus</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>261</xmin>
+			<ymin>767</ymin>
+			<xmax>1511</xmax>
+			<ymax>2298</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>car</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1861</xmin>
+			<ymin>1462</ymin>
+			<xmax>2304</xmax>
+			<ymax>1809</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>car</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1650</xmin>
+			<ymin>1421</ymin>
+			<xmax>1961</xmax>
+			<ymax>1661</ymax>
+		</bndbox>
+	</object>
+</annotation>

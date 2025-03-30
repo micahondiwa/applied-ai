@@ -1,0 +1,50 @@
+<annotation>
+	<folder>annotationimagesframe_2</folder>
+	<filename>Dipto_ 64.jpg</filename>
+	<path>C:\Users\ASUS\Desktop\annotationimagesframe_2\Dipto_ 64.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>motorbike</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>448</xmin>
+			<ymin>504</ymin>
+			<xmax>1862</xmax>
+			<ymax>1070</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>suv</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>923</xmin>
+			<ymin>271</ymin>
+			<xmax>1040</xmax>
+			<ymax>368</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>pickup</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1137</xmin>
+			<ymin>238</ymin>
+			<xmax>1236</xmax>
+			<ymax>334</ymax>
+		</bndbox>
+	</object>
+</annotation>

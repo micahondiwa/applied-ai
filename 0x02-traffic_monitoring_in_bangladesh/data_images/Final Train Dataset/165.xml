@@ -1,0 +1,26 @@
+<annotation>
+	<folder>New folder (2)</folder>
+	<filename>20200201_170710.jpg</filename>
+	<path>C:\Users\ASUS\Desktop\New folder (2)\20200201_170710.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>4160</width>
+		<height>3120</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>pickup</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>305</xmin>
+			<ymin>226</ymin>
+			<xmax>3996</xmax>
+			<ymax>2412</ymax>
+		</bndbox>
+	</object>
+</annotation>

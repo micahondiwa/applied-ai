@@ -1,0 +1,50 @@
+<annotation>
+	<folder>Images</folder>
+	<filename>82537527_2620596264888663_1453052419091988480_n.jpg</filename>
+	<path>E:\Datasets\Dataset\Images\82537527_2620596264888663_1453052419091988480_n.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>960</width>
+		<height>639</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bicycle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>652</xmin>
+			<ymin>489</ymin>
+			<xmax>678</xmax>
+			<ymax>543</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>three wheelers (CNG)</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>431</xmin>
+			<ymin>457</ymin>
+			<xmax>479</xmax>
+			<ymax>514</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>auto rickshaw</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>369</xmin>
+			<ymin>452</ymin>
+			<xmax>407</xmax>
+			<ymax>516</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,50 @@
+<annotation>
+	<folder>New folder</folder>
+	<filename>82940542_487758925450449_5976430611378733056_n.jpg</filename>
+	<path>C:\Users\Mohammad Navid\Desktop\New folder\82940542_487758925450449_5976430611378733056_n.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>560</width>
+		<height>750</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>van</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>3</xmin>
+			<ymin>336</ymin>
+			<xmax>204</xmax>
+			<ymax>514</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>car</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>206</xmin>
+			<ymin>373</ymin>
+			<xmax>305</xmax>
+			<ymax>490</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>car</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>248</xmin>
+			<ymin>373</ymin>
+			<xmax>560</xmax>
+			<ymax>667</ymax>
+		</bndbox>
+	</object>
+</annotation>

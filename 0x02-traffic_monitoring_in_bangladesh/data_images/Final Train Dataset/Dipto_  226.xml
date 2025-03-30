@@ -1,0 +1,50 @@
+<annotation>
+	<folder>annotationimagesframe_5</folder>
+	<filename>Dipto_	226.jpg</filename>
+	<path>C:\Users\ASUS\Desktop\annotationimagesframe_5\Dipto_	226.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>rickshaw</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>258</xmin>
+			<ymin>433</ymin>
+			<xmax>573</xmax>
+			<ymax>798</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>auto rickshaw</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>632</xmin>
+			<ymin>423</ymin>
+			<xmax>820</xmax>
+			<ymax>725</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>motorbike</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>598</xmin>
+			<ymin>500</ymin>
+			<xmax>635</xmax>
+			<ymax>673</ymax>
+		</bndbox>
+	</object>
+</annotation>

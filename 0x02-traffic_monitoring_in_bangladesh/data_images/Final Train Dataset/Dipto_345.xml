@@ -1,0 +1,26 @@
+<annotation>
+	<folder>New folder</folder>
+	<filename>Dipto_345.JPG</filename>
+	<path>C:\Users\ASUS\Desktop\New folder\Dipto_345.JPG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>941</width>
+		<height>465</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>truck</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>435</xmin>
+			<ymin>3</ymin>
+			<xmax>602</xmax>
+			<ymax>122</ymax>
+		</bndbox>
+	</object>
+</annotation>

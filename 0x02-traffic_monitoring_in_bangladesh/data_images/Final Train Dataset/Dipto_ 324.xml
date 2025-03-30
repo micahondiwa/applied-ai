@@ -1,0 +1,26 @@
+<annotation>
+	<folder>annotationimageframes_4</folder>
+	<filename>Dipto_ 324.jpg</filename>
+	<path>C:\Users\ASUS\Desktop\annotationimageframes_4\Dipto_ 324.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bus</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>448</xmin>
+			<ymin>288</ymin>
+			<xmax>1742</xmax>
+			<ymax>763</ymax>
+		</bndbox>
+	</object>
+</annotation>

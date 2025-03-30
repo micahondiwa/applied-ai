@@ -1,0 +1,26 @@
+<annotation>
+	<folder>annotationimageframes_3</folder>
+	<filename>Dipto_ 252.jpg</filename>
+	<path>C:\Users\ASUS\Desktop\annotationimageframes_3\Dipto_ 252.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>motorbike</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>407</xmin>
+			<ymin>145</ymin>
+			<xmax>1103</xmax>
+			<ymax>1063</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,38 @@
+<annotation>
+	<folder>annotationimagesframe</folder>
+	<filename>Dipto_34.jpg</filename>
+	<path>C:\Users\ASUS\Desktop\annotationimagesframe\Dipto_34.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1280</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>rickshaw</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>668</xmin>
+			<ymin>266</ymin>
+			<xmax>707</xmax>
+			<ymax>327</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>human hauler</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>700</xmin>
+			<ymin>256</ymin>
+			<xmax>729</xmax>
+			<ymax>293</ymax>
+		</bndbox>
+	</object>
+</annotation>

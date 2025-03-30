@@ -1,0 +1,50 @@
+<annotation>
+	<folder>annotationimagesframe_3</folder>
+	<filename>Dipto_ 172.jpg</filename>
+	<path>C:\Users\ASUS\Desktop\annotationimagesframe_3\Dipto_ 172.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>motorbike</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>845</xmin>
+			<ymin>331</ymin>
+			<xmax>870</xmax>
+			<ymax>387</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>suv</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>982</xmin>
+			<ymin>317</ymin>
+			<xmax>996</xmax>
+			<ymax>331</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>pickup</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>923</xmin>
+			<ymin>310</ymin>
+			<xmax>943</xmax>
+			<ymax>331</ymax>
+		</bndbox>
+	</object>
+</annotation>

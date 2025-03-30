@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Images</folder>
+	<filename>82687161_200145741165345_319092460657573888_n.jpg</filename>
+	<path>E:\Datasets\Dataset\Images\82687161_200145741165345_319092460657573888_n.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>960</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>pickup</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>438</xmin>
+			<ymin>368</ymin>
+			<xmax>708</xmax>
+			<ymax>618</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,50 @@
+<annotation>
+	<folder>annotationimagesframe_4</folder>
+	<filename>Dipto_ 197.jpg</filename>
+	<path>C:\Users\ASUS\Desktop\annotationimagesframe_4\Dipto_ 197.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>motorbike</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>120</xmin>
+			<ymin>525</ymin>
+			<xmax>1920</xmax>
+			<ymax>1041</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>rickshaw</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1362</xmin>
+			<ymin>459</ymin>
+			<xmax>1534</xmax>
+			<ymax>682</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>pickup</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>855</xmin>
+			<ymin>516</ymin>
+			<xmax>936</xmax>
+			<ymax>595</ymax>
+		</bndbox>
+	</object>
+</annotation>

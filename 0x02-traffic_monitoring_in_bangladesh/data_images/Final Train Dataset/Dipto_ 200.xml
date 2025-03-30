@@ -1,0 +1,38 @@
+<annotation>
+	<folder>annotationimagesframe_4</folder>
+	<filename>Dipto_ 200.jpg</filename>
+	<path>C:\Users\ASUS\Desktop\annotationimagesframe_4\Dipto_ 200.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>motorbike</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>13</xmin>
+			<ymin>210</ymin>
+			<xmax>1907</xmax>
+			<ymax>1080</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>minivan</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>885</xmin>
+			<ymin>2</ymin>
+			<xmax>1254</xmax>
+			<ymax>251</ymax>
+		</bndbox>
+	</object>
+</annotation>

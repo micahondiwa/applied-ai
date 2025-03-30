@@ -1,0 +1,50 @@
+<annotation>
+	<folder>annotationimagesframe_2</folder>
+	<filename>Dipto_ 65.jpg</filename>
+	<path>C:\Users\ASUS\Desktop\annotationimagesframe_2\Dipto_ 65.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>truck</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>395</xmin>
+			<ymin>245</ymin>
+			<xmax>791</xmax>
+			<ymax>570</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>suv</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1052</xmin>
+			<ymin>401</ymin>
+			<xmax>1093</xmax>
+			<ymax>436</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>three wheelers (CNG)</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1046</xmin>
+			<ymin>389</ymin>
+			<xmax>1057</xmax>
+			<ymax>403</ymax>
+		</bndbox>
+	</object>
+</annotation>

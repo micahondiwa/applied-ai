@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Images</folder>
+	<filename>82596449_109480503800874_1907442195024052224_n.jpg</filename>
+	<path>E:\Datasets\Dataset\Images\82596449_109480503800874_1907442195024052224_n.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>816</width>
+		<height>612</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>minivan</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>359</xmin>
+			<ymin>341</ymin>
+			<xmax>382</xmax>
+			<ymax>364</ymax>
+		</bndbox>
+	</object>
+</annotation>

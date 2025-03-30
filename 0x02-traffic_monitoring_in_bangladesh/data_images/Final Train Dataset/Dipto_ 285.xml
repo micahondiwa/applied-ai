@@ -1,0 +1,26 @@
+<annotation>
+	<folder>annotationimageframes_3</folder>
+	<filename>Dipto_ 285.jpg</filename>
+	<path>C:\Users\ASUS\Desktop\annotationimageframes_3\Dipto_ 285.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>pickup</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>673</xmin>
+			<ymin>381</ymin>
+			<xmax>919</xmax>
+			<ymax>677</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,50 @@
+<annotation>
+	<folder>Images</folder>
+	<filename>82848886_2217802778523988_3971650808021254144_n.jpg</filename>
+	<path>E:\Datasets\Dataset\Images\82848886_2217802778523988_3971650808021254144_n.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>768</width>
+		<height>772</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>auto rickshaw</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>624</xmin>
+			<ymin>228</ymin>
+			<xmax>712</xmax>
+			<ymax>391</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>bus</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>75</xmin>
+			<ymin>172</ymin>
+			<xmax>360</xmax>
+			<ymax>331</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>auto rickshaw</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>588</xmin>
+			<ymin>274</ymin>
+			<xmax>614</xmax>
+			<ymax>300</ymax>
+		</bndbox>
+	</object>
+</annotation>
