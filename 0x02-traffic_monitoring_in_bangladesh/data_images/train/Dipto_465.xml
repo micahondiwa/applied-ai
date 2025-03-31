@@ -1,0 +1,38 @@
+<annotation>
+	<folder>04</folder>
+	<filename>Dipto_465.jpg</filename>
+	<path>C:\Users\ASUS\Desktop\04\Dipto_465.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>989</width>
+		<height>525</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>three wheelers (CNG)</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>596</xmin>
+			<ymin>46</ymin>
+			<xmax>732</xmax>
+			<ymax>170</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>three wheelers (CNG)</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>892</xmin>
+			<ymin>85</ymin>
+			<xmax>987</xmax>
+			<ymax>218</ymax>
+		</bndbox>
+	</object>
+</annotation>

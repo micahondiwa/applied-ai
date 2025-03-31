@@ -1,0 +1,26 @@
+<annotation>
+	<folder>06</folder>
+	<filename>Dipto_505.jpg</filename>
+	<path>C:\Users\ASUS\Desktop\06\Dipto_505.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1300</width>
+		<height>674</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bus</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>694</xmin>
+			<ymin>81</ymin>
+			<xmax>1244</xmax>
+			<ymax>648</ymax>
+		</bndbox>
+	</object>
+</annotation>
