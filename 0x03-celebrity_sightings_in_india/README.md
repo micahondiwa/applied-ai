@@ -1,1 +1,1 @@
-# Celebrity Sightings in Uganda
+# Celebrity Sightings in India
