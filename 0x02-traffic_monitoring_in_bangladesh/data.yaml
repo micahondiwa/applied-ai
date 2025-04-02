@@ -21,6 +21,6 @@ names:
 - van
 - wheelbarrow
 nc: 21
-path: /workspaces/applied-ai/0x02-traffic_monitoring_in_bangladesh/data_yolo
-train: images/train
-val: images/val
+path: ..
+train: data_yolo/images/train
+val: data_yolo/images/val
