@@ -1,7 +1,4 @@
 # Import needed libraries
-%load_ext autoreload
-%autoreload 2
-
 from pathlib import Path
 
 import matplotlib
