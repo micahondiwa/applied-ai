@@ -18,9 +18,15 @@ resnet = resnet.eval()
 
 
 # Fill in the locate_face function
+
 def locate_faces(image):
-    ...
-    
+    cropped_images, probs = mtcnn(image, return_prob=True)
+    boxes, _ = mtcnn.detect(image)
+
+    if boxes is None or cropped_images is None:
+        return []
+    else:
+        return list(zip(boxes, probs, cropped_images))
 
 
 # Fill in the determine_name_dist function
