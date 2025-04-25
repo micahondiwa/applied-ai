@@ -8,11 +8,11 @@ from facenet_pytorch import MTCNN, InceptionResnetV1
 from PIL import Image
 
 # Load MTCNN, Resnet, and the embedding data
+mtcnn = MTCNN(image_size=240, keep_all=True, min_face_size=40)
 
-mtcnn = ...
+resnet = InceptionResnetV1(pretrained="vggface2")
 
-resnet = ...
-embedding_data = ...
+embedding_data = torch.load("embeddings.pt")
 
 resnet = resnet.eval()
 
