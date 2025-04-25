@@ -87,8 +87,30 @@ def label_face(name, dist, box, axis):
 
 
 # Fill in the add_labels_to_image function
+
 def add_labels_to_image(image):
-    ...
+    # This sets the image size
+    # and draws the original image
+    width, height = image.width, image.height
+    dpi = 96
+    fig = plt.figure(figsize=(width / dpi, height / dpi), dpi=dpi)
+    axis = fig.subplots()
+    axis.imshow(image)
+    plt.axis("off")
 
+    # Use the function locate_faces to get the individual face info
+    faces = locate_faces(image)
 
-# This file © 2024 by WorldQuant University is licensed under CC BY-NC-ND 4.0.
+    for box, prob, cropped in faces:
+        # If the probability is less than 0.90,
+        # It's not a face, skip this run of the loop with continue
+        if prob < 0.9:
+            continue
+        
+        # Call determine_name_dist to get the name and distance
+        name, dist = determine_name_dist(cropped)
+
+        # Use label_face to draw the box and label on this face
+        label_face(name, dist, box, axis)
+
+    return fig
