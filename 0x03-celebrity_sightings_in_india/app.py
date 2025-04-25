@@ -48,10 +48,10 @@ def process_image():
 
 def run_face_recognition(image_data):
     # Open image_data with PIL
-    input_image = ...
+    input_image = Image.open(image_data)
 
     # Run our function on the PIL image
-    img_out = ...
+    img_out = add_labels_to_image(input_image)
 
     return img_out
 
