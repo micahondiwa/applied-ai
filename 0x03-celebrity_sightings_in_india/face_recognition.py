@@ -56,9 +56,34 @@ def determine_name_dist(cropped_image, threshold=0.9):
     return name, dist
 
 # Fill in the label_face function
+
 def label_face(name, dist, box, axis):
-    ...
+    """Adds a box and a label to the axis from matplotlib
+    - name and dist are combined to make a label
+    - box is the four corners of the bounding box for the face
+    - axis is the return from fig.subplots()
+    Call this in the same cell as the figure is created"""
+
+    # Generates a Rectangle for the bounding box
+    # set the color to "blue" and fill to False
+    rect =  plt.Rectangle(
+            (box[0], box[1]),
+            box[2] - box[0],
+            box[3] - box[1],
+            fill=False,
+            color="blue",
+    )
+    axis.add_patch(rect)
+
+    # Set color to be red if the name is "Undetected"
+    # otherwise set it to be blue
+    if name == "Undetected":
+        color = "red"
+    else:
+        color = "blue"
     
+    label = f"{name} {dist:.2f}"
+    axis.text(box[0], box[1], label, fontsize="large", color=color)
 
 
 # Fill in the add_labels_to_image function
