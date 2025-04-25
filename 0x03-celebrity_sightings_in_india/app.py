@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 
 # Set the route to "/"
-@app...
+@app.route("/")
 def home():
     return render_template("upload.html")
 
