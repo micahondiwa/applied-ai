@@ -30,10 +30,30 @@ def locate_faces(image):
 
 
 # Fill in the determine_name_dist function
-def determine_name_dist(cropped_image, threshold=0.9):
-    ...
-    
 
+def determine_name_dist(cropped_image, threshold=0.9):
+    # Use `resnet` on `cropped_image` to get the embedding.
+    emb = resnet(cropped_image.unsqueeze(0))
+
+    # Compute the distance to each known embedding
+    distances = []
+    for known_emb, name in embedding_data:
+        # Use torch.dist to compute the distance between
+        # `emb` and the known embedding `known_emb`
+        dist = torch.dist(emb, known_emb).item()
+        distances.append((dist, name))
+
+    # Find the name corresponding to the smallest distance
+    dist, closest = min(distances)
+
+    # If the distance is less than the threshold, set name to closest
+    # otherwise set name to "Undetected"
+    if dist < threshold:
+        name = closest
+    else:
+        name = "Undetected"
+
+    return name, dist
 
 # Fill in the label_face function
 def label_face(name, dist, box, axis):
