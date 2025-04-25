@@ -1,4 +1,14 @@
 # Import needed libraries
+%load_ext autoreload
+%autoreload 2
+
+from pathlib import Path
+
+import matplotlib
+import matplotlib.pyplot as plt 
+import torch
+from facenet_pytorch import MTCNN, InceptionResnetV1
+from PIL import Image
 
 # Load MTCNN, Resnet, and the embedding data
 
