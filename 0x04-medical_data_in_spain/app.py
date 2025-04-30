@@ -24,7 +24,7 @@ def main():
     # Add number image selector to the sidebar
     # Task 5.4.3: Add values for the keyword arguments min_value= and max_value= in the st.sidebar.number_input function call in the main function.
     num_images = st.sidebar.number_input(
-        "Number of Images", min_value=..., max_value=..., value=1, step=1
+        "Number of Images", min_value=1, max_value=7, value=1, step=1
     )
 
 
@@ -54,4 +54,4 @@ def generate_images(num_images, model_id):
 
 if __name__ == "__main__":
     # Task 5.4.4: Add a call to the main function in the main block.
-    ...
+    main()
