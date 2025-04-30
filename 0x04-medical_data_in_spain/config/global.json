@@ -1,0 +1,3492 @@
+{
+    "00001_DCGAN_MMG_CALC_ROI": {
+        "execution": {
+            "package_name": "00001_DCGAN_MMG_CALC_ROI",
+            "package_link": "https://zenodo.org/record/7031735/files/00001_DCGAN_MMG_CALC_ROI.zip?download=1",
+            "model_name": "DCGAN",
+            "extension": ".pt",
+            "image_size": [
+                128,
+                128
+            ],
+            "dependencies": [
+                "numpy",
+                "Path",
+                "torch",
+                "opencv-contrib-python-headless"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "num_samples",
+                        "output_path",
+                        "save_images"
+                    ],
+                    "custom": {
+                        "image_size": 128
+                    }
+                },
+                "input_latent_vector_size": 100
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 1000,
+                "FID": 67.60,
+                "FID_ratio": 0.497,
+                "FID_RADIMAGENET": 1.27,
+                "FID_RADIMAGENET_ratio": 0.197,
+                "CLF_delta": null,
+                "SEG_delta": null,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "SEG": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                }
+            },
+            "use_cases": [
+                "classification"
+            ],
+            "organ": [
+                "breast",
+                "breasts",
+                "chest"
+            ],
+            "modality": [
+                "MMG",
+                "Mammography",
+                "Mammogram",
+                "full-field digital",
+                "full-field digital MMG",
+                "full-field MMG",
+                "full-field Mammography",
+                "digital Mammography",
+                "digital MMG",
+                "x-ray mammography"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "noise to image",
+                "image generation",
+                "unconditional generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "INbreast"
+            ],
+            "augmentations": [
+                "crop and resize",
+                "horizontal flip",
+                "vertical flip"
+            ],
+            "generates": [
+                "calcification",
+                "calcifications",
+                "calcification roi",
+                "calcification ROI",
+                "calcification images",
+                "calcification region of interest"
+            ],
+            "height": 128,
+            "width": 128,
+            "depth": null,
+            "type": "DCGAN",
+            "license": "MIT",
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Mammogram",
+                "Mammography",
+                "Digital Mammography",
+                "Full field Mammography",
+                "Full-field Mammography",
+                "128x128",
+                "128 x 128",
+                "MammoGANs",
+                "Microcalcification",
+                "Microcalcifications"
+            ],
+            "year": "2021"
+        },
+        "description": {
+            "title": "DCGAN Model for Mammogram Calcification Region of Interest Generation (Trained on INbreast)",
+            "provided_date": "12th May 2021",
+            "trained_date": "May 2021",
+            "provided_after_epoch": 300,
+            "version": "0.0.1",
+            "publication": null,
+            "doi": [
+                "10.5281/zenodo.5187714"
+            ],
+            "inputs": [
+                "image_size: default=128, help=128 is the image size that works with the supplied checkpoint."
+            ],
+            "comment": "A deep convolutional generative adversarial network (DCGAN) that generates regions of interest (ROI) of mammograms containing benign and/or malignant calcifications. Pixel dimensions are 128x128. The DCGAN was trained on ROIs from the INbreast dataset (Moreira et al, 2012). The uploaded ZIP file contains the files dcgan.pt (model weights), __init__.py (image generation method and utils), a README.md, and the GAN model architecture (in pytorch) below the /src folder. Kernel size=6 used in DCGAN discriminator."
+        }
+    },
+    "00002_DCGAN_MMG_MASS_ROI": {
+        "execution": {
+            "package_name": "MALIGN_DCGAN",
+            "package_link": "https://zenodo.org/record/6647242/files/MALIGN_DCGAN.zip?download=1",
+            "model_name": "malign_mass_gen",
+            "extension": "",
+            "image_size": [
+                128,
+                128
+            ],
+            "dependencies": [
+                "numpy",
+                "torch",
+                "opencv-contrib-python-headless"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "num_samples",
+                        "output_path",
+                        "save_images"
+                    ],
+                    "custom": {}
+                },
+                "input_latent_vector_size": 200
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": {
+                    "number_radiologists": 2,
+                    "AUC": [
+                        0.56,
+                        0.45
+                    ],
+                    "accuracy": [
+                        0.48,
+                        0.61
+                    ],
+                    "years_experience": [
+                        7,
+                        25
+                    ]
+                },
+                "FID_no_images": 1000,
+                "FID": 80.51,
+                "FID_ratio": 0.358,
+                "FID_RADIMAGENET": 6.19,
+                "FID_RADIMAGENET_ratio": 0.036,
+                "CLF_delta": 0.06,
+                "SEG_delta": null,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {
+                        "f1": 0.96
+                    },
+                    "trained_on_real": {
+                        "f1": 0.90
+                    }
+                },
+                "SEG": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                }
+            },
+            "use_cases": [
+                "classification"
+            ],
+            "organ": [
+                "breast",
+                "breasts",
+                "chest"
+            ],
+            "modality": [
+                "MMG",
+                "Mammography",
+                "Mammogram",
+                "full-field digital",
+                "full-field digital MMG",
+                "full-field MMG",
+                "full-field Mammography",
+                "digital Mammography",
+                "digital MMG",
+                "x-ray mammography"
+            ],
+            "vendors": [
+                "Hologic Inc"
+            ],
+            "centres": [],
+            "function": [
+                "noise to image",
+                "image generation",
+                "unconditional generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "Optimam"
+            ],
+            "augmentations": [],
+            "generates": [
+                "mass",
+                "masses",
+                "breast masses",
+                "mass rois",
+                "mass ROIs",
+                "mass images",
+                "breast mass ROIs"
+            ],
+            "height": 128,
+            "width": 128,
+            "depth": null,
+            "type": "DCGAN",
+            "dataset_type": "public",
+            "license": "MIT",
+            "privacy_preservation": null,
+            "year": "2019",
+            "tags": [
+                "Turing Test",
+                "Visual Turing Test",
+                "Mammogram",
+                "Mammography",
+                "Digital Mammography",
+                "Full field Mammography",
+                "Full-field Mammography",
+                "128 x 128",
+                "128x128",
+                "MammoGANs",
+                "Nodule",
+                "Nodules",
+                "Breast mass"
+            ]
+        },
+        "description": {
+            "title": "DCGAN Model for Mammogram Mass Region of Interest Generation (Trained on OPTIMAM)",
+            "provided_date": null,
+            "trained_date": null,
+            "provided_after_epoch": null,
+            "version": null,
+            "publication": null,
+            "doi": [
+                "10.5281/zenodo.5188557",
+                "10.1117/12.2543506",
+                "10.1117/12.2560473"
+            ],
+            "inputs": [],
+            "comment": "A deep convolutional generative adversarial network (DCGAN) that generates regions of interest (ROI) of mammograms containing benign and/or malignant masses. Pixel dimensions are 128x128. The DCGAN was trained on ROIs from the Optimam dataset (Halling-Brown et al, 2014). The uploaded ZIP file contains the files malign_mass_gen (model weights), and __init__.py (image generation method and pytorch GAN model architecture). Kernel size=6 used in DCGAN discriminator."
+        }
+    },
+    "00003_CYCLEGAN_MMG_DENSITY_FULL": {
+        "execution": {
+            "package_name": "00003_CYCLEGAN_MMG_DENSITY_FULL",
+            "package_link": "https://zenodo.org/record/7093550/files/00003_CYCLEGAN_MMG_DENSITY_FULL.zip?download=1",
+            "model_name": "CycleGAN_high_density",
+            "extension": ".pth",
+            "image_size": [
+                1332,
+                800
+            ],
+            "dependencies": [
+                "numpy",
+                "Path",
+                "pyyaml",
+                "opencv-contrib-python-headless",
+                "torch",
+                "torchvision",
+                "dominate",
+                "visdom",
+                "Pillow"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "output_path",
+                        "save_images",
+                        "num_samples"
+                    ],
+                    "custom": {
+                        "translate_all_images": false,
+                        "input_path": "models/00003_CYCLEGAN_MMG_DENSITY_FULL/images",
+                        "image_size": [
+                            1332,
+                            800
+                        ],
+                        "gpu_id": 0
+                    }
+                }
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 74,
+                "FID": 150.16,
+                "FID_ratio": 0.439,
+                "FID_RADIMAGENET": 3.00,
+                "FID_RADIMAGENET_ratio": 0.265,
+                "CLF_delta": null,
+                "SEG_delta": null,
+                "DET_delta": 0.06,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "SEG": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {
+                        "AUC": 0.89
+                    },
+                    "trained_on_real": {
+                        "AUC": 0.83
+                    }
+                }
+            },
+            "use_cases": [
+                "classification",
+                "detection",
+                "domain-translation"
+            ],
+            "organ": [
+                "breast",
+                "breasts",
+                "chest"
+            ],
+            "modality": [
+                "MMG",
+                "Mammography",
+                "Mammogram",
+                "full-field digital",
+                "full-field digital MMG",
+                "full-field MMG",
+                "full-field Mammography",
+                "digital Mammography",
+                "digital MMG",
+                "x-ray mammography"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "image to image",
+                "image generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "BCDR"
+            ],
+            "augmentations": [
+                "resize"
+            ],
+            "generates": [
+                "full images",
+                "mammograms",
+                "full-field digital mammograms"
+            ],
+            "height": 1332,
+            "width": 800,
+            "depth": null,
+            "type": "CycleGAN",
+            "license": "BSD",
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Mammogram",
+                "Mammography",
+                "Digital Mammography",
+                "Full field Mammography",
+                "Full-field Mammography",
+                "CycleGANs",
+                "CycleGAN",
+                "Density",
+                "Breast Density",
+                "High Density",
+                "Low Density",
+                "ACR"
+            ],
+            "year": "2021"
+        },
+        "description": {
+            "title": "CycleGAN Model for Low-to-High Brest Density Mammograms Translation (Trained on BCDR)",
+            "provided_date": "12th Sep 2021",
+            "trained_date": "Sep 2021",
+            "provided_after_epoch": 100,
+            "version": "0.0.1",
+            "publication": null,
+            "doi": [
+                "https://doi.org/10.48550/arXiv.2209.09809"
+            ],
+            "inputs": [
+                "input_path: default=models/00003_CYCLEGAN_MMG_DENSITY_FULL/images, help=the path to .png mammogram images that are translated from low to high breast density or vice versa",
+                "image_size: default=[1332, 800], help=list with image height and width. Images are rescaled to these pixel dimensions.",
+                "gpu_id: default=0, help=the gpu to run the model on.",
+                "translate_all_images: default=False, help=flag to override num_samples in case the user wishes to translate all images in the specified input_path folder."
+            ],
+            "comment": "A cycle generative adversarial network (CycleGAN) that generates mammograms with high breast density from an original mammogram e.g. with low-breast density. The CycleGAN was trained using normal (without pathologies) digital mammograms from BCDR dataset (Lopez, M. G., et al. 2012). The uploaded ZIP file contains the files CycleGAN_high_density.pth (model weights), __init__.py (image generation method and utils) and the GAN model architecture (in pytorch) below the /src folder."
+        }
+    },
+    "00004_PIX2PIX_MMG_MASSES_W_MASKS": {
+        "execution": {
+            "package_name": "00004_PIX2PIX_MMG_MASSES_W_MASKS",
+            "package_link": "https://zenodo.org/record/7093760/files/00004_PIX2PIX_MMG_MASSES_W_MASKS.zip?download=1",
+            "model_name": "pix2pix_mask_to_mass_model",
+            "extension": ".pth",
+            "image_size": [
+                256,
+                256
+            ],
+            "dependencies": [
+                "numpy",
+                "Path",
+                "pyyaml",
+                "opencv-contrib-python-headless",
+                "torch",
+                "torchvision",
+                "dominate",
+                "visdom",
+                "Pillow",
+                "imageio",
+                "scikit-image"
+            ],
+            "generate_method": {
+                "name": "generate_GAN_images",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "output_path",
+                        "save_images",
+                        "num_samples"
+                    ],
+                    "custom": {
+                        "input_path": "models/00004_PIX2PIX_MMG_MASSES_W_MASKS/images",
+                        "image_size": [
+                            256,
+                            256
+                        ],
+                        "patch_size": [
+                            32,
+                            32
+                        ],
+                        "shapes": [
+                            "oval",
+                            "lobulated"
+                        ],
+                        "ssim_threshold": 0.2,
+                        "gpu_id": 0
+                    }
+                }
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 199,
+                "FID": 161.17,
+                "FID_ratio": 0.423,
+                "FID_RADIMAGENET": null,
+                "FID_RADIMAGENET_ratio": null,
+                "CLF_delta": null,
+                "SEG_delta": null,
+                "DET_delta": null,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "SEG": {
+                    "trained_on_fake": {
+                        "Dice": 0.737
+                    },
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {
+                        "Dice": 0.865
+                    }
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                }
+            },
+            "use_cases": [
+                "segmentation"
+            ],
+            "organ": [
+                "breast",
+                "breasts",
+                "chest"
+            ],
+            "modality": [
+                "MMG",
+                "Mammography",
+                "Mammogram",
+                "full-field digital",
+                "full-field digital MMG",
+                "full-field MMG",
+                "full-field Mammography",
+                "digital Mammography",
+                "digital MMG",
+                "x-ray mammography"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "mask to image",
+                "image generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "BCDR"
+            ],
+            "augmentations": [
+                "resize"
+            ],
+            "generates": [
+                "regions of interest",
+                "ROI",
+                "mammograms",
+                "patches",
+                "full-field digital mammograms"
+            ],
+            "height": 256,
+            "width": 256,
+            "depth": null,
+            "type": "pix2pix",
+            "license": "BSD",
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Mammogram",
+                "Mammography",
+                "Digital Mammography",
+                "Full field Mammography",
+                "Full-field Mammography",
+                "pix2pix",
+                "Pix2Pix",
+                "Mass segmentation",
+                "Breast lesion"
+            ],
+            "year": "2021"
+        },
+        "description": {
+            "title": "Generates synthetic patches given a random mask tiled with texture patches extracted from real images (Trained on BCDR)",
+            "provided_date": "5th Oct 2021",
+            "trained_date": "Sep 2021",
+            "provided_after_epoch": 200,
+            "version": "0.0.1",
+            "publication": null,
+            "doi": [
+                "10.5281/zenodo.5863095"
+            ],
+            "inputs": [
+                "input_path: default=models/00004_PIX2PIX_MMG_MASSES_W_MASKS/images help=inputs that are used in the pix2pix input image pool (e.g. for tiled image generation) ",
+                "image_size: default=[256, 256] help=height and width of images.",
+                "patch_size: default=[32, 32] help=height and width of patches (annotation size on image).",
+                "shapes: default=['oval', 'lobulated'] help=the type of the mask curve shapes generated via bezier curves.",
+                "ssim_threshold: default=0.2, help=the SSIM threshold that images must surpass to be output.",
+                "gpu_id: default=0 help=the gpu to run the model."
+            ],
+            "comment": "Generates synthetic patches given a random mask tiled with texture patches extracted from real images. The texture patches should be extracted from within the mass an outside the mass of a real image. Hence, some real ROIs are required to start with and its ideal for data augmentation purposes for mass segmentation."
+        }
+    },
+    "00005_DCGAN_MMG_MASS_ROI": {
+        "execution": {
+            "package_name": "00005_DCGAN_MMG_MASS_ROI",
+            "package_link": "https://zenodo.org/record/7031758/files/00005_DCGAN_MMG_MASS_ROI.zip?download=1",
+            "model_name": "500",
+            "extension": ".pt",
+            "image_size": [
+                128,
+                128
+            ],
+            "dependencies": [
+                "numpy",
+                "torch",
+                "opencv-contrib-python-headless"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "num_samples",
+                        "output_path",
+                        "save_images"
+                    ],
+                    "custom": {}
+                },
+                "input_latent_vector_size": 100
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 199,
+                "FID": 180.04,
+                "FID_ratio": 0.379,
+                "FID_RADIMAGENET": 1.67,
+                "FID_RADIMAGENET_ratio": 0.593,
+                "CLF_delta": 0.029,
+                "SEG_delta": null,
+                "DET_delta": null,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {
+                        "f1": 0.920,
+                        "AUC": 0.959,
+                        "AUPRC": 0.992
+                    },
+                    "trained_on_real": {
+                        "f1": 0.891,
+                        "AUC": 0.928,
+                        "AUPRC": 0.986
+                    }
+                },
+                "SEG": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                }
+            },
+            "use_cases": [
+                "classification"
+            ],
+            "organ": [
+                "breast",
+                "breasts",
+                "chest"
+            ],
+            "modality": [
+                "MMG",
+                "Mammography",
+                "Mammogram",
+                "full-field digital",
+                "full-field digital MMG",
+                "full-field MMG",
+                "full-field Mammography",
+                "digital Mammography",
+                "digital MMG",
+                "x-ray mammography"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "noise to image",
+                "image generation",
+                "unconditional generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "BCDR"
+            ],
+            "augmentations": [
+                "horizontal flip",
+                "vertical flip"
+            ],
+            "generates": [
+                "mass",
+                "masses",
+                "mass roi",
+                "mass ROI",
+                "mass images",
+                "mass region of interest",
+                "nodule",
+                "nodule",
+                "nodule roi",
+                "nodule ROI",
+                "nodule images",
+                "nodule region of interest"
+            ],
+            "height": 128,
+            "width": 128,
+            "depth": null,
+            "type": "DCGAN",
+            "license": "MIT",
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Breast",
+                "Mammogram",
+                "Mammography",
+                "Digital Mammography",
+                "Full field Mammography",
+                "Full-field Mammography",
+                "128x128",
+                "128 x 128",
+                "MammoGANs",
+                "Masses",
+                "Nodules"
+            ],
+            "year": "2021"
+        },
+        "description": {
+            "title": "DCGAN Model for Mammogram MASS Patch Generation (Trained on BCDR)",
+            "provided_date": "Dec 2021",
+            "trained_date": "Nov 2021",
+            "provided_after_epoch": 500,
+            "version": "0.0.1",
+            "publication": "IWBI2022",
+            "doi": [
+                "10.48550/arXiv.2203.04961"
+            ],
+            "inputs": [],
+            "comment": "A deep convolutional generative adversarial network (DCGAN) that generates mass patches of mammograms. Pixel dimensions are 128x128. The DCGAN was trained on MMG patches from the BCDR dataset (Lopez et al, 2012). The uploaded ZIP file contains the files 500.pt (model weight), __init__.py (image generation method and utils), a requirements.txt, and the GAN model architecture (in pytorch) below the /src folder."
+        }
+    },
+    "00006_WGANGP_MMG_MASS_ROI": {
+        "execution": {
+            "package_name": "00006_WGANGP_MMG_MASS_ROI",
+            "package_link": "https://zenodo.org/record/7031763/files/00006_WGANGP_MMG_MASS_ROI.zip?download=1",
+            "model_name": "10000",
+            "extension": ".pt",
+            "image_size": [
+                128,
+                128
+            ],
+            "dependencies": [
+                "numpy",
+                "torch",
+                "opencv-contrib-python-headless"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "num_samples",
+                        "output_path",
+                        "save_images"
+                    ],
+                    "custom": {}
+                },
+                "input_latent_vector_size": 100
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 199,
+                "FID": 221.30,
+                "FID_ratio": 0.308,
+                "FID_RADIMAGENET": 1.80,
+                "FID_RADIMAGENET_ratio": 0.550,
+                "CLF_delta": 0.078,
+                "SEG_delta": null,
+                "DET_delta": null,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {
+                        "f1": 0.969,
+                        "AUC": 0.978,
+                        "AUPRC": 0.996
+                    },
+                    "trained_on_real": {
+                        "f1": 0.891,
+                        "AUC": 0.928,
+                        "AUPRC": 0.986
+                    }
+                },
+                "SEG": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                }
+            },
+            "use_cases": [
+                "classification"
+            ],
+            "organ": [
+                "breast",
+                "breasts",
+                "chest"
+            ],
+            "modality": [
+                "MMG",
+                "Mammography",
+                "Mammogram",
+                "full-field digital",
+                "full-field digital MMG",
+                "full-field MMG",
+                "full-field Mammography",
+                "digital Mammography",
+                "digital MMG",
+                "x-ray mammography"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "noise to image",
+                "image generation",
+                "unconditional generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "BCDR"
+            ],
+            "augmentations": [
+                "horizontal flip",
+                "vertical flip"
+            ],
+            "generates": [
+                "mass",
+                "masses",
+                "mass roi",
+                "mass ROI",
+                "mass images",
+                "mass region of interest",
+                "nodule",
+                "nodule",
+                "nodule roi",
+                "nodule ROI",
+                "nodule images",
+                "nodule region of interest"
+            ],
+            "height": 128,
+            "width": 128,
+            "depth": null,
+            "type": "WGAN-GP",
+            "license": "MIT",
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Breast",
+                "Mammogram",
+                "Mammography",
+                "Digital Mammography",
+                "Full field Mammography",
+                "Full-field Mammography",
+                "128x128",
+                "128 x 128",
+                "MammoGANs",
+                "Masses",
+                "Nodules"
+            ],
+            "year": "2022"
+        },
+        "description": {
+            "title": "WGAN-GP Model for Mammogram MASS Patch Generation (Trained on BCDR)",
+            "provided_date": "Mar 2022",
+            "trained_date": "Mar 2022",
+            "provided_after_epoch": 10000,
+            "version": "1.0.0",
+            "publication": "IWBI2022",
+            "doi": [
+                "10.48550/arXiv.2203.04961"
+            ],
+            "inputs": [],
+            "comment": "A wasserstein generative adversarial network with gradient penalty (WGAN-GP) that generates mass patches of mammograms. Pixel dimensions are 128x128. The DCGAN was trained on MMG patches from the BCDR dataset (Lopez et al, 2012). The uploaded ZIP file contains the files 10000.pt (model weight), __init__.py (image generation method and utils), a requirements.txt, and the GAN model architecture (in pytorch) below the /src folder."
+        }
+    },
+    "00007_INPAINT_BRAIN_MRI": {
+        "execution": {
+            "package_name": "00007_INPAINT_BRAIN_MRI",
+            "package_link": "https://zenodo.org/records/10214796/files/00007_INPAINT_BRAIN_MRI.zip?download=1",
+            "model_name": "inp_gen",
+            "extension": ".pth",
+            "image_size": [
+                256,
+                256
+            ],
+            "dependencies": [
+                "matplotlib",
+                "albumentations",
+                "torch",
+                "torchvision",
+                "numpy",
+                "pillow",
+                "opencv-contrib-python"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "num_samples",
+                        "output_path",
+                        "save_images"
+                    ],
+                    "custom": {
+                        "image_size": 256,
+                        "num_inpaints_per_sample": 2,
+                        "randomize_input_image_order": true,
+                        "F_img_path": null,
+                        "T1_img_path": null,
+                        "T1c_img_path": null,
+                        "T2_img_path": null,
+                        "add_variations_to_mask": true,
+                        "x_center": 130,
+                        "y_center": 130,
+                        "radius_1": 10,
+                        "radius_2": 15,
+                        "radius_3": 30
+                    }
+                }
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 1000,
+                "FID": 140.02,
+                "FID_ratio": 0.219,
+                "FID_RADIMAGENET": 5.31,
+                "FID_RADIMAGENET_ratio": 0.012,
+                "CLF_delta": null,
+                "SEG_delta": 0.018,
+                "DET_delta": null,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "SEG": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {
+                        "dice": 0.814
+                    },
+                    "trained_on_real": {
+                        "dice": 0.796
+                    }
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                }
+            },
+            "use_cases": [
+                "segmentation",
+                "classification",
+                "detection"
+            ],
+            "organ": [
+                "brain",
+                "cranial",
+                "head"
+            ],
+            "modality": [
+                "MRI",
+                "Cranial MRI",
+                "Brain MRI",
+                "Flair",
+                "T1",
+                "T1c",
+                "T1 contrast-enhanced",
+                "T2"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "image inpainting",
+                "mask to image",
+                "circle to tumor grade",
+                "tumor grade to image",
+                "cross-modal synthesis",
+                "data augmentation",
+                "domain-adaptation"
+            ],
+            "condition": [],
+            "dataset": [
+                "BRATS"
+            ],
+            "augmentations": [],
+            "generates": [
+                "brain MRI",
+                "Flair",
+                "T1",
+                "T1c",
+                "T2",
+                "binary mask",
+                "tumor grade mask"
+            ],
+            "height": 256,
+            "width": 256,
+            "depth": 1,
+            "type": "Inpaint Generator",
+            "license": null,
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Brain",
+                "Tumor",
+                "MRI Generation",
+                "Inpainting",
+                "Brain MRI Synthesis",
+                "Concentric Circle",
+                "Tumor Inpainting",
+                "Tumor Grade",
+                "Tumor Grading",
+                "Cross-Modality",
+                "Multi-modal synthesis"
+            ],
+            "year": "2022"
+        },
+        "description": {
+            "title": "Tumor Inpainting Model for Generation of Flair, T1, T1c, T2 Brain MRI Images (Trained on BRATS)",
+            "provided_date": "August 2022",
+            "trained_date": "2020",
+            "provided_after_epoch": null,
+            "version": null,
+            "publication": "Medical Physics Journal",
+            "doi": [
+                "https://doi.org/10.48550/arXiv.2003.07526",
+                "https://doi.org/10.1002/mp.14701"
+            ],
+            "inputs": [
+                "image_size: default=256, help=the size if height and width of the generated images.",
+                "num_inpaints_per_sample: default=2, help=the number of tumor inpaint images per MRI modality that is generated from the same input sample",
+                "randomize_input_image_order: default=True, help=input image order is randomized. This helps to not exclude input images if batch generation is used.",
+                "F_img_path: default=None, help=The path to the folder were the input Flair MRI images are stored.",
+                "T1_img_path: default=None, help=The path to the folder were the input T1 MRI images are stored.",
+                "T1c_img_path: default=None, help=The path to the folder were the input T1c MRI images are stored.",
+                "T2_img_path: default=None, help=The path to the folder were the input T2 MRI images are stored.",
+                "add_variations_to_mask: default=True, help=This slightly varies the values of x_center, y_center, radius_1, radius_2, radius_3. If True, the same segmentation masks is still used to generate each of the 4 modality images. This is recommended as it results in higher image diversity.",
+                "x_center: default=130, help=the x coordinate of the concentric circle upon which the binary mask, the tumor grade mask, and, ultimately, the generated images are based.",
+                "y_center: default=130, help=the y coordinate of the concentric circle upon which the binary mask, the tumor grade mask, and, ultimately, the generated images are based.",
+                "radius_1: default=10, help=the radius of the first (inside second) of three concentric circles (necrotic and non-enhancing tumor) upon which the binary mask, the tumor grade mask, and, ultimately, the generated images are based.",
+                "radius_2: default=15, help=the radius of the second (inside third) of three concentric circles (enhancing tumor) upon which the binary mask, the tumor grade mask, and, ultimately, the generated images are based.",
+                "radius_3: default=30, help=the radius of the third of three concentric circles (edema) upon which the binary mask, the tumor grade mask, and, ultimately, the generated images are based."
+            ],
+            "comment": "A Generative adversarial network (GAN) for Inpainting tumors (based on concentric circle-based tumor grade masks) into multi-modal MRI images (Flair, T1, T1c, T2) with dimensions 256x256. Model was trained on BRATS MRI Dataset (Menze et al). For more information, see publication (https://doi.org/10.1002/mp.14701). Model comes with example input image folders. Apart from that, the uploaded ZIP file contains the model checkpoint files .pth (model weight), __init__.py (image generation method and utils), a requirements.txt, the MEDIGAN metadata.json. The proposed method synthesizes brain tumor images from normal brain images and concentric circles that are simplified tumor masks. The tumor masks are defined by complex features, such as grade, appearance, size, and location. Thus, these features of the tumor masks are condensed and simplified to concentric circles. In the proposed method, the user-defined concentric circles are converted to various tumor masks through deep neural networks. The normal brain images are masked by the tumor mask, and the masked region is inpainted with the tumor images synthesized by the deep neural networks. Also see original repository at: https://github.com/KSH0660/BrainTumor"
+        }
+    },
+    "00008_C-DCGAN_MMG_MASSES": {
+        "execution": {
+            "package_name": "00008_C-DCGAN_MMG_MASSES",
+            "package_link": "https://zenodo.org/record/7382545/files/00008_C-DCGAN_MMG_MASSES.zip?download=1",
+            "model_name": "1400_ckpt_train_cbis_ddsm",
+            "extension": ".pt",
+            "image_size": [
+                128,
+                128
+            ],
+            "dependencies": [
+                "numpy",
+                "torch",
+                "opencv-contrib-python-headless"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "num_samples",
+                        "output_path",
+                        "save_images"
+                    ],
+                    "custom": {
+                        "condition": null,
+                        "z": null,
+                        "is_cbisddsm_training_data": true
+                    }
+                },
+                "input_latent_vector_size": 100
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 379,
+                "FID": 137.75,
+                "FID_ratio": 0.272,
+                "FID_RADIMAGENET": 3.05,
+                "FID_RADIMAGENET_ratio": 0.151,
+                "CLF_delta": null,
+                "SEG_delta": null,
+                "DET_delta": null,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "SEG": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                }
+            },
+            "use_cases": [
+                "classification",
+                "malignant versus benign classification"
+            ],
+            "organ": [
+                "breast",
+                "breasts",
+                "chest"
+            ],
+            "modality": [
+                "MMG",
+                "Mammography",
+                "Mammogram",
+                "full-field digital",
+                "full-field digital MMG",
+                "full-field MMG",
+                "full-field Mammography",
+                "digital Mammography",
+                "digital MMG",
+                "x-ray mammography"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "noise to image",
+                "image generation",
+                "unconditional generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "CBIS-DDSM"
+            ],
+            "augmentations": [
+                "horizontal flip",
+                "vertical flip"
+            ],
+            "generates": [
+                "mass",
+                "masses",
+                "mass roi",
+                "mass ROI",
+                "mass images",
+                "mass region of interest",
+                "nodule",
+                "nodule",
+                "nodule roi",
+                "nodule ROI",
+                "nodule images",
+                "nodule region of interest"
+            ],
+            "height": 128,
+            "width": 128,
+            "depth": null,
+            "type": "Conditional DCGAN",
+            "license": "MIT",
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Breast",
+                "Mammogram",
+                "Mammography",
+                "Digital Mammography",
+                "Full field Mammography",
+                "Full-field Mammography",
+                "128x128",
+                "128 x 128",
+                "MammoGANs",
+                "Masses",
+                "Nodules"
+            ],
+            "year": "2022"
+        },
+        "description": {
+            "title": "Conditional DCGAN Model for Patch Generation of Mammogram Masses Conditioned on Biopsy Proven Malignancy Status (Trained on CBIS-DDSM)",
+            "provided_date": "November 2022",
+            "trained_date": "November 2022",
+            "provided_after_epoch": [
+                1400,
+                1750
+            ],
+            "version": "1.0.1",
+            "publication": null,
+            "doi": [],
+            "inputs": [
+                "condition: default=None, help=Either 0, 1 or None. Condition indicates whether a generated mass is malignant (0) or benign (1). If None, a balanced set of malignant and benign tumor images is created.",
+                "z: default=None, help=the input noise torch tensor for the generator. If None, this option is ignored (e.g. random input vector generation)",
+                "is_cbisddsm_training_data: default=True, help=Boolean indicating whether a GAN checkpoint trained on the predefined test or train dataset (predefined by cbis-ddsm dataset creators) should be used."
+            ],
+            "comment": "A class-conditional deep convolutional generative adversarial network that generates mass patches of mammograms that are conditioned to either be benign (1) or malignant (0). Pixel dimensions are 128x128. The Cond-DCGAN was trained on MMG patches from the CBIS-DDSM (Sawyer Lee et al, 2016). The uploaded ZIP file contains the files 1750.pt (model weight), __init__.py (image generation method and utils), a requirements.txt, a LICENSE file, the MEDIGAN metadata, the used GAN training config file, a test.sh file to run the model, and two folders with a few generated images."
+        }
+    },
+    "00009_PGGAN_POLYP_PATCHES_W_MASKS": {
+        "execution": {
+            "package_name": "ProGAN-4ch",
+            "package_link": "https://zenodo.org/record/6653744/files/ProGAN-4ch.zip?download=1",
+            "model_name": "ProGAN_300000_g",
+            "extension": ".model",
+            "image_size": [
+                256,
+                256,
+                4
+            ],
+            "dependencies": [
+                "torch",
+                "torchvision",
+                "numpy",
+                "pillow",
+                "glob2",
+                "opencv-contrib-python",
+                "scikit-image",
+                "natsort",
+                "matplotlib"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "num_samples",
+                        "output_path",
+                        "save_images"
+                    ],
+                    "custom": {
+                        "z_dim": 128,
+                        "save_option": "image_and_mask",
+                        "gpu_id": null,
+                        "channel": 128,
+                        "pixel_norm": false,
+                        "img_channels": 4,
+                        "tanh": false,
+                        "step": 6,
+                        "alpha": 1
+                    }
+                },
+                "input_latent_vector_size": 128
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 1000,
+                "FID": 225.85,
+                "FID_ratio": 0.192,
+                "FID_RADIMAGENET": null,
+                "FID_RADIMAGENET_ratio": null,
+                "CLF_delta": null,
+                "SEG_delta": null,
+                "DET_delta": null,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "SEG": {
+                    "trained_on_fake": {
+                        "dice_loss": 0.137
+                    },
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {
+                        "dice_loss": 0.112
+                    }
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                }
+            },
+            "use_cases": [
+                "classification",
+                "segmentation"
+            ],
+            "organ": [
+                "polyps",
+                "colon"
+            ],
+            "modality": [
+                "endoscopy",
+                "gastrointestinal endoscopy"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "noise to image and mask",
+                "noise to image",
+                "noise to mask",
+                "image generation",
+                "unconditional generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "HyperKvasir"
+            ],
+            "augmentations": [
+                "resize",
+                "Albumentations library augmentations"
+            ],
+            "generates": [
+                "masks",
+                "segmentation masks",
+                "polyp masks",
+                "endoscopy masks",
+                "endoscopy roi",
+                "endoscopy ROI",
+                "endoscopy images",
+                "endoscopy region of interest",
+                "polyp",
+                "polyps",
+                "polyp roi",
+                "polyp ROI",
+                "polyp images",
+                "polyp region of interest"
+            ],
+            "height": 256,
+            "width": 256,
+            "depth": 4,
+            "type": "Progressively-growing GAN (PGGAN)",
+            "license": "MIT",
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Endoscopy",
+                "Colonoscopy",
+                "Polyps",
+                "Polyp",
+                "Polyp Segmentation",
+                "Segmentation",
+                "256x256",
+                "256 x 256"
+            ],
+            "year": "2022"
+        },
+        "description": {
+            "title": "PGGAN Model for Patch Generation of Polyps with Corresponding Segmentation Masks (Trained on HyperKvasir)",
+            "provided_date": "June 2022",
+            "trained_date": "June 2022",
+            "provided_after_epoch": 1750,
+            "version": "1.0.0",
+            "publication": null,
+            "doi": [
+                "https://doi.org/10.1371/journal.pone.0267976"
+            ],
+            "inputs": [
+                "gpu_id: type=int, default=None, help=0 is the first gpu, 1 is the second gpu, etc.",
+                "channel: type=int, default=128, help=determines how big the model is, smaller value means faster training, but less capacity of the model",
+                "z_dim: type=int, default=128, help=the initial latent vectors dimension, can be smaller such as 64, if the dataset is not diverse",
+                "pixel_norm: default=False, action=store_true, help=a normalization method inside the model, you can try use it or not depends on the dataset",
+                "img_channels: default=4, help=Number of channels in input data., for rgb images=3, gray=1 etc.",
+                "tanh: default=False, action=store_true, help=an output non-linearity on the output of Generator, you can try use it or not depends on the dataset",
+                "step: default=6, help=step to generate fake data. # can be 1 = 8, 2 = 16, 3 = 32, 4 = 64, 5 = 128, 6 = 256",
+                "alpha: default=1, help=Progressive gan parameter to set, 0 or 1",
+                "save_option: default=image_only, help=Options to save output, image_only, mask_only, image_and_mask, choices=[image_only,mask_only, image_and_mask]",
+                "num_fakes: default=1000, help=Number of fakes to generate, type=int"
+            ],
+            "comment": "A Progressively-growing generative adversarial network that generates a 4 dimensional output containing an RGB image (channels 1-3) and a segmentation mask (channel 4). The RGB images are images of polyps and the segmentation mask indicates the location and shape of the polyp on the image. Pixel dimensions are 256x256. The model was trained on gastrointestinal endoscopy imaging data from the HyperKvasir dataset by Borgli et al (2020, 'https://doi.org/10.1038/s41597-020-00622-y'). The uploaded ZIP file contains the files ProGAN_300000_g.model (model weight), __init__.py (image generation method and utils), a requirements.txt, a LICENSE file, the MEDIGAN metadata, the source code from the official repository ('https://github.com/vlbthambawita/singan-seg-polyp'), and a test.sh file to run the model, and a folder 'examples/' with a few generated images."
+        }
+    },
+    "00010_FASTGAN_POLYP_PATCHES_W_MASKS": {
+        "execution": {
+            "package_name": "00010_FASTGAN_POLYP_PATCHES_W_MASKS",
+            "package_link": "https://zenodo.org/record/7051328/files/00010_FASTGAN_POLYP_PATCHES_W_MASKS.zip?download=1",
+            "model_name": "FastGAN_all_50000",
+            "extension": ".pth",
+            "image_size": [
+                256,
+                256,
+                4
+            ],
+            "dependencies": [
+                "torch",
+                "scipy",
+                "torchvision",
+                "opencv-contrib-python",
+                "pandas",
+                "easing-functions",
+                "scikit-image",
+                "matplotlib",
+                "ipdb",
+                "lmdb",
+                "numpy"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "num_samples",
+                        "output_path",
+                        "save_images"
+                    ],
+                    "custom": {
+                        "save_option": "image_and_mask",
+                        "gpu_id": null
+                    }
+                },
+                "input_latent_vector_size": 256
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 1000,
+                "FID": 63.99,
+                "FID_ratio": 0.677,
+                "FID_RADIMAGENET": 7.32,
+                "FID_RADIMAGENET_ratio": 0.015,
+                "CLF_delta": null,
+                "SEG_delta": null,
+                "DET_delta": null,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "SEG": {
+                    "trained_on_fake": {
+                        "IoU": 0.798
+                    },
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {
+                        "IoU": 0.827
+                    }
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                }
+            },
+            "use_cases": [
+                "classification",
+                "segmentation"
+            ],
+            "organ": [
+                "polyps",
+                "colon"
+            ],
+            "modality": [
+                "endoscopy",
+                "gastrointestinal endoscopy"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "noise to image and mask",
+                "noise to image",
+                "noise to mask",
+                "image generation",
+                "unconditional generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "HyperKvasir"
+            ],
+            "augmentations": [
+                "resize",
+                "Albumentations library augmentations"
+            ],
+            "generates": [
+                "masks",
+                "segmentation masks",
+                "polyp masks",
+                "endoscopy masks",
+                "endoscopy roi",
+                "endoscopy ROI",
+                "endoscopy images",
+                "endoscopy region of interest",
+                "polyp",
+                "polyps",
+                "polyp roi",
+                "polyp ROI",
+                "polyp images",
+                "polyp region of interest"
+            ],
+            "height": 256,
+            "width": 256,
+            "depth": 4,
+            "type": "FastGAN",
+            "license": "GNU GENERAL PUBLIC LICENSE",
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Endoscopy",
+                "Colonoscopy",
+                "Polyps",
+                "Polyp",
+                "Polyp Segmentation",
+                "Segmentation",
+                "256x256",
+                "256 x 256"
+            ],
+            "year": "2022"
+        },
+        "description": {
+            "title": "FastGAN Model for Patch Generation of Polyps with Corresponding Segmentation Masks (Trained on HyperKvasir)",
+            "provided_date": "June 2022",
+            "trained_date": "June 2022",
+            "provided_after_epoch": null,
+            "version": null,
+            "publication": null,
+            "doi": [
+                "https://doi.org/10.1371/journal.pone.0267976"
+            ],
+            "inputs": [
+                "gpu_id: type=int, default=None, help=0 is the first gpu, 1 is the second gpu, etc.",
+                "save_option: default=image_only, help=Options to save output, image_only, mask_only, image_and_mask, choices=[image_only,mask_only, image_and_mask]"
+            ],
+            "comment": "A Fast generative adversarial network (FastGAN) that generates a 4 dimensional output containing an RGB image (channels 1-3) and a segmentation mask (channel 4). FASTGAN is from the paper 'Towards Faster and Stabilized GAN Training for High-fidelity Few-shot Image Synthesis' in ICLR 2021. The RGB images are images of polyps and the segmentation mask indicates the location and shape of the polyp on the image. Pixel dimensions are 256x256. The model was trained on gastrointestinal endoscopy imaging data from the HyperKvasir dataset by Borgli et al (2020, 'https://doi.org/10.1038/s41597-020-00622-y'). The uploaded ZIP file contains the files FastGAN_all_50000.pth (model weight), __init__.py (image generation method and utils), a requirements.txt, a LICENSE file, the MEDIGAN metadata, the source code from the repository ('https://github.com/vlbthambawita/singan-seg-polyp'), and a test.sh file to run the model, and a folder 'examples/' with a few generated images."
+        }
+    },
+    "00011_SINGAN_POLYP_PATCHES_W_MASKS": {
+        "execution": {
+            "package_name": "00011_SINGAN_POLYP_PATCHES_W_MASKS",
+            "package_link": "https://zenodo.org/record/7117187/files/00011_SINGAN_POLYP_PATCHES_W_MASKS.zip?download=1",
+            "model_name": "singan_seg_polyp/SinGAN-Generated/TrainedModels_1_clean/1/Gs",
+            "extension": ".pth",
+            "image_size": [
+                250,
+                250,
+                3
+            ],
+            "dependencies": [
+                "numpy",
+                "tqdm",
+                "torch",
+                "torchvision",
+                "pandas",
+                "PyYAML",
+                "scipy",
+                "scikit-image",
+                "scikit-learn",
+                "requests",
+                "natsort",
+                "matplotlib"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "num_samples",
+                        "output_path",
+                        "save_images"
+                    ],
+                    "custom": {
+                        "model_files": "models/00011_SINGAN_POLYP_PATCHES_W_MASKS/singan_seg_polyp/SinGAN-Generated",
+                        "gen_start_scale": 0,
+                        "checkpoint_ids": null,
+                        "multiple_checkpoints": false
+                    }
+                }
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 1000,
+                "FID": 171.15,
+                "FID_ratio": 0.253,
+                "FID_RADIMAGENET": null,
+                "FID_RADIMAGENET_ratio": null,
+                "CLF_delta": null,
+                "SEG_delta": null,
+                "DET_delta": null,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "SEG": {
+                    "trained_on_fake": {
+                        "f1": 0.863
+                    },
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {
+                        "f1": 0.888
+                    }
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                }
+            },
+            "use_cases": [
+                "classification",
+                "segmentation"
+            ],
+            "organ": [
+                "polyps",
+                "colon"
+            ],
+            "modality": [
+                "endoscopy",
+                "gastrointestinal endoscopy"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "noise to image and mask",
+                "noise to image",
+                "noise to mask",
+                "image generation",
+                "unconditional generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "HyperKvasir"
+            ],
+            "augmentations": [
+                "resize",
+                "Albumentations library augmentations"
+            ],
+            "generates": [
+                "masks",
+                "segmentation masks",
+                "polyp masks",
+                "endoscopy masks",
+                "endoscopy roi",
+                "endoscopy ROI",
+                "endoscopy images",
+                "endoscopy region of interest",
+                "polyp",
+                "polyps",
+                "polyp roi",
+                "polyp ROI",
+                "polyp images",
+                "polyp region of interest"
+            ],
+            "height": 250,
+            "width": 250,
+            "depth": 3,
+            "type": "SinGAN",
+            "license": "MIT",
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Endoscopy",
+                "Colonoscopy",
+                "Polyps",
+                "Polyp",
+                "Polyp Segmentation",
+                "Segmentation"
+            ],
+            "year": "2022"
+        },
+        "description": {
+            "title": "SinGAN Model for Patch Generation of Polyps with Corresponding Segmentation Masks (Trained on HyperKvasir)",
+            "provided_date": "June 2022",
+            "trained_date": "June 2022",
+            "provided_after_epoch": null,
+            "version": null,
+            "publication": null,
+            "doi": [
+                "https://doi.org/10.1371/journal.pone.0267976"
+            ],
+            "inputs": [
+                "model_files: default=models/00011_SINGAN_POLYP_PATCHES_W_MASKS/singan_seg_polyp/SinGAN-Generated help=the folder where the checkpoints are stored | ",
+                "gen_start_scale: default=0 help=The start for scaling (progressively increasing generator input size) in SinGAN.",
+                "checkpoint_ids: default=None help=A list of checkpoint ids that will be used for polyp generation. If None, all available checkpoints (i.e. 1000) or one random one (depending on 'multiple_checkpoints' arg) will be used.",
+                "multiple_checkpoints: default=False help=A boolean indicating if all checkpoint_ids or one random one is used for generating images, but only in case 'checkpoint_ids'==None"
+            ],
+            "comment": "A SinGAN generative adversarial network that generates a 2dimensional output image tuple containing a 3-channel RGB image and a 3-channel segmentation mask. SinGAN is from the paper 'SinGAN: Learning a Generative Model from a Single Natural Image' in ICCV 2019. The width of the outputted images varies depending on the corresponding original image. The RGB images are images of polyps and the segmentation mask indicates the location and shape of the polyp on the image. Pixel dimensions are 213x256. The model was trained on gastrointestinal endoscopy imaging data from the HyperKvasir dataset by Borgli et al (2020, 'https://doi.org/10.1038/s41597-020-00622-y'). The uploaded ZIP file contains the checkpoints in folder 'SinGAN-Generated' (model weights), __init__.py (image generation method and utils), a requirements.txt, a LICENSE file, the MEDIGAN metadata, the source code from the repository ('https://github.com/vlbthambawita/singan-seg-polyp'), and a test.sh file to run the model, and a folder 'examples/' with a few generated images."
+        }
+    },
+    "00012_C-DCGAN_MMG_MASSES": {
+        "execution": {
+            "package_name": "00012_C-DCGAN_MMG_MASSES",
+            "package_link": "https://zenodo.org/record/7031755/files/00012_C-DCGAN_MMG_MASSES.zip?download=1",
+            "model_name": "1250",
+            "extension": ".pt",
+            "image_size": [
+                128,
+                128
+            ],
+            "dependencies": [
+                "numpy",
+                "torch",
+                "opencv-contrib-python-headless"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "num_samples",
+                        "output_path",
+                        "save_images"
+                    ],
+                    "custom": {
+                        "condition": null,
+                        "z": null
+                    }
+                },
+                "input_latent_vector_size": 100
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 199,
+                "FID": 205.29,
+                "FID_ratio": 0.332,
+                "FID_RADIMAGENET": 5.69,
+                "FID_RADIMAGENET_ratio": 0.080,
+                "CLF_delta": null,
+                "SEG_delta": null,
+                "DET_delta": null,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "SEG": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                }
+            },
+            "use_cases": [
+                "classification",
+                "malignant versus benign classification"
+            ],
+            "organ": [
+                "breast",
+                "breasts",
+                "chest"
+            ],
+            "modality": [
+                "MMG",
+                "Mammography",
+                "Mammogram",
+                "full-field digital",
+                "full-field digital MMG",
+                "full-field MMG",
+                "full-field Mammography",
+                "digital Mammography",
+                "digital MMG",
+                "x-ray mammography"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "noise to image",
+                "image generation",
+                "unconditional generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "CBIS-DDSM"
+            ],
+            "augmentations": [
+                "horizontal flip",
+                "vertical flip"
+            ],
+            "generates": [
+                "mass",
+                "masses",
+                "mass roi",
+                "mass ROI",
+                "mass images",
+                "mass region of interest",
+                "nodule",
+                "nodule",
+                "nodule roi",
+                "nodule ROI",
+                "nodule images",
+                "nodule region of interest"
+            ],
+            "height": 128,
+            "width": 128,
+            "depth": null,
+            "type": "Conditional DCGAN",
+            "license": "MIT",
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Breast",
+                "Mammogram",
+                "Mammography",
+                "Digital Mammography",
+                "Full field Mammography",
+                "Full-field Mammography",
+                "128x128",
+                "128 x 128",
+                "MammoGANs",
+                "Masses",
+                "Nodules"
+            ],
+            "year": "2022"
+        },
+        "description": {
+            "title": "Conditional DCGAN Model for Patch Generation of Mammogram Masses Conditioned on Biopsy Proven Malignancy Status (Trained on BCDR)",
+            "provided_date": "June 2022",
+            "trained_date": "June 2022",
+            "provided_after_epoch": 1250,
+            "version": "1.0.0",
+            "publication": null,
+            "doi": [],
+            "inputs": [
+                "condition: default=None, help=Either 0, 1 or None. Condition indicates whether a generated mass is malignant (0) or benign (1). If None, a balanced set of malignant and benign tumor images is created.",
+                "z: default=None, help=the input noise torch tensor for the generator. If None, this option is ignored (e.g. random input vector generation)"
+            ],
+            "comment": "A class-conditional deep convolutional generative adversarial network that generates mass patches of mammograms that are conditioned to either be benign (1) or malignant (0). Pixel dimensions are 128x128. The Cond-DCGAN was trained on MMG patches from the BCDR dataset (Lopez et al, 2012). The uploaded ZIP file contains the files 1250.pt (model weight), __init__.py (image generation method and utils), a requirements.txt, a LICENSE file, the MEDIGAN metadata, the used GAN training config file, a test.sh file to run the model, and two folders with a few generated images."
+        }
+    },
+    "00013_CYCLEGAN_MMG_DENSITY_OPTIMAM_MLO": {
+        "execution": {
+            "package_name": "00013_CYCLEGAN_MMG_DENSITY_OPTIMAM_MLO",
+            "package_link": "https://zenodo.org/record/7093556/files/00013_CYCLEGAN_MMG_DENSITY_OPTIMAM_MLO.zip?download=1",
+            "model_name": "latest_net_G_A",
+            "extension": ".pth",
+            "image_size": [
+                1332,
+                800
+            ],
+            "dependencies": [
+                "numpy",
+                "Path",
+                "pyyaml",
+                "opencv-contrib-python-headless",
+                "torch",
+                "torchvision",
+                "dominate",
+                "visdom",
+                "Pillow"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "output_path",
+                        "save_images",
+                        "num_samples"
+                    ],
+                    "custom": {
+                        "translate_all_images": false,
+                        "input_path": "models/00013_CYCLEGAN_MMG_DENSITY_OPTIMAM_MLO/images",
+                        "image_size": [
+                            1332,
+                            800
+                        ],
+                        "gpu_id": 0,
+                        "low_to_high": true
+                    }
+                }
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 358,
+                "FID": 101.01,
+                "FID_ratio": 0.650,
+                "FID_RADIMAGENET": 1.14,
+                "FID_RADIMAGENET_ratio": 0.153,
+                "CLF_delta": null,
+                "SEG_delta": null,
+                "DET_delta": null,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "SEG": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                }
+            },
+            "use_cases": [
+                "classification",
+                "detection",
+                "domain-translation"
+            ],
+            "organ": [
+                "breast",
+                "breasts",
+                "chest"
+            ],
+            "modality": [
+                "MMG",
+                "Mammography",
+                "Mammogram",
+                "full-field digital",
+                "full-field digital MMG",
+                "full-field MMG",
+                "full-field Mammography",
+                "digital Mammography",
+                "digital MMG",
+                "x-ray mammography"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "image to image",
+                "image generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "OPTIMAM"
+            ],
+            "augmentations": [
+                "resize"
+            ],
+            "generates": [
+                "full images",
+                "mammograms",
+                "full-field digital mammograms"
+            ],
+            "height": 1332,
+            "width": 800,
+            "depth": null,
+            "type": "CycleGAN",
+            "license": "BSD",
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Mammogram",
+                "Mammography",
+                "Digital Mammography",
+                "Full field Mammography",
+                "Full-field Mammography",
+                "CycleGANs",
+                "CycleGAN",
+                "Density",
+                "Breast Density",
+                "High Density",
+                "Low Density",
+                "ACR"
+            ],
+            "year": "2021"
+        },
+        "description": {
+            "title": "CycleGAN Model for Low-to-High Brest Density Mammograms Translation of MLO VIEW (Trained on OPTIMAM)",
+            "provided_date": "2022",
+            "trained_date": "2022",
+            "provided_after_epoch": null,
+            "version": "0.0.1",
+            "publication": null,
+            "doi": [
+                "https://doi.org/10.48550/arXiv.2209.09809"
+            ],
+            "inputs": [
+                "input_path: default=models/00013_CYCLEGAN_MMG_DENSITY_OPTIMAM_MLO/images, help=the path to .png mammogram images that are translated from low to high breast density or vice versa",
+                "image_size: default=[1332, 800], help=list with image height and width. Images are rescaled to these pixel dimensions.",
+                "gpu_id: default=0, help=the gpu to run the model on.",
+                "translate_all_images: default=False, help=flag to override num_samples in case the user wishes to translate all images in the specified input_path folder.",
+                "low_to_high: default=True, help=if true, breast density is added. If false, it is removed from the input image. A different generator of the cycleGAN is used based on this flag."
+            ],
+            "comment": "A cycle generative adversarial network (CycleGAN) that generates mammograms with high breast density from an original mammogram e.g. with low-breast density. The CycleGAN was trained using normal (without pathologies) digital mammograms from OPTIMAM dataset (Halling-Brown et al, 2014). The uploaded ZIP file contains the files CycleGAN_high_density.pth (model weights), __init__.py (image generation method and utils) and the GAN model architecture (in pytorch) below the /src folder."
+        }
+    },
+    "00014_CYCLEGAN_MMG_DENSITY_OPTIMAM_CC": {
+        "execution": {
+            "package_name": "00014_CYCLEGAN_MMG_DENSITY_OPTIMAM_CC",
+            "package_link": "https://zenodo.org/record/7093553/files/00014_CYCLEGAN_MMG_DENSITY_OPTIMAM_CC.zip?download=1",
+            "model_name": "latest_net_G_A",
+            "extension": ".pth",
+            "image_size": [
+                1332,
+                800
+            ],
+            "dependencies": [
+                "numpy",
+                "Path",
+                "pyyaml",
+                "opencv-contrib-python-headless",
+                "torch",
+                "torchvision",
+                "dominate",
+                "visdom",
+                "Pillow"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "output_path",
+                        "save_images",
+                        "num_samples"
+                    ],
+                    "custom": {
+                        "translate_all_images": false,
+                        "input_path": "models/00014_CYCLEGAN_MMG_DENSITY_OPTIMAM_CC/images",
+                        "image_size": [
+                            1332,
+                            800
+                        ],
+                        "gpu_id": 0,
+                        "low_to_high": true
+                    }
+                }
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 350,
+                "FID": 73.77,
+                "FID_ratio": 0.564,
+                "FID_RADIMAGENET": 0.83,
+                "FID_RADIMAGENET_ratio": 0.190,
+                "CLF_delta": null,
+                "SEG_delta": null,
+                "DET_delta": 0.02,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "SEG": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {
+                        "AUC": 0.85
+                    },
+                    "trained_on_real": {
+                        "AUC": 0.83
+                    }
+                }
+            },
+            "use_cases": [
+                "classification",
+                "detection",
+                "domain-translation"
+            ],
+            "organ": [
+                "breast",
+                "breasts",
+                "chest"
+            ],
+            "modality": [
+                "MMG",
+                "Mammography",
+                "Mammogram",
+                "full-field digital",
+                "full-field digital MMG",
+                "full-field MMG",
+                "full-field Mammography",
+                "digital Mammography",
+                "digital MMG",
+                "x-ray mammography"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "image to image",
+                "image generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "OPTIMAM"
+            ],
+            "augmentations": [
+                "resize"
+            ],
+            "generates": [
+                "full images",
+                "mammograms",
+                "full-field digital mammograms"
+            ],
+            "height": 1332,
+            "width": 800,
+            "depth": null,
+            "type": "CycleGAN",
+            "license": "BSD",
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Mammogram",
+                "Mammography",
+                "Digital Mammography",
+                "Full field Mammography",
+                "Full-field Mammography",
+                "CycleGANs",
+                "CycleGAN",
+                "Density",
+                "Breast Density",
+                "High Density",
+                "Low Density",
+                "ACR"
+            ],
+            "year": "2021"
+        },
+        "description": {
+            "title": "CycleGAN Model for Low-to-High Brest Density Mammograms Translation of CC VIEW (Trained on OPTIMAM)",
+            "provided_date": "2022",
+            "trained_date": "2022",
+            "provided_after_epoch": null,
+            "version": "0.0.1",
+            "publication": null,
+            "doi": [
+                "https://doi.org/10.48550/arXiv.2209.09809"
+            ],
+            "inputs": [
+                "input_path: default=models/00014_CYCLEGAN_MMG_DENSITY_OPTIMAM_CC/images, help=the path to .png mammogram images that are translated from low to high breast density or vice versa",
+                "image_size: default=[1332, 800], help=list with image height and width. Images are rescaled to these pixel dimensions.",
+                "gpu_id: default=0, help=the gpu to run the model on.",
+                "translate_all_images: default=False, help=flag to override num_samples in case the user wishes to translate all images in the specified input_path folder.",
+                "low_to_high: default=True, help=if true, breast density is added. If false, it is removed from the input image. A different generator of the cycleGAN is used based on this flag."
+            ],
+            "comment": "A cycle generative adversarial network (CycleGAN) that generates mammograms with high breast density from an original mammogram e.g. with low-breast density. The CycleGAN was trained using normal (without pathologies) digital mammograms from OPTIMAM dataset (Halling-Brown et al, 2014). The uploaded ZIP file contains the files CycleGAN_high_density.pth (model weights), __init__.py (image generation method and utils) and the GAN model architecture (in pytorch) below the /src folder."
+        }
+    },
+    "00015_CYCLEGAN_MMG_DENSITY_CSAW_MLO": {
+        "execution": {
+            "package_name": "00015_CYCLEGAN_MMG_DENSITY_CSAW_MLO",
+            "package_link": "https://zenodo.org/record/7093566/files/00015_CYCLEGAN_MMG_DENSITY_CSAW_MLO.zip?download=1",
+            "model_name": "latest_net_G_A",
+            "extension": ".pth",
+            "image_size": [
+                1332,
+                800
+            ],
+            "dependencies": [
+                "numpy",
+                "Path",
+                "pyyaml",
+                "opencv-contrib-python-headless",
+                "torch",
+                "torchvision",
+                "dominate",
+                "visdom",
+                "Pillow"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "output_path",
+                        "save_images",
+                        "num_samples"
+                    ],
+                    "custom": {
+                        "translate_all_images": false,
+                        "input_path": "models/00015_CYCLEGAN_MMG_DENSITY_CSAW_MLO/images",
+                        "image_size": [
+                            1332,
+                            800
+                        ],
+                        "gpu_id": 0,
+                        "low_to_high": true
+                    }
+                }
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 192,
+                "FID": 162.67,
+                "FID_ratio": 0.461,
+                "FID_RADIMAGENET": 4.07,
+                "FID_RADIMAGENET_ratio": 0.076,
+                "CLF_delta": null,
+                "SEG_delta": null,
+                "DET_delta": 0.02,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "SEG": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {
+                        "AUC": 0.85
+                    },
+                    "trained_on_real": {
+                        "AUC": 0.83
+                    }
+                }
+            },
+            "use_cases": [
+                "classification",
+                "detection",
+                "domain-translation"
+            ],
+            "organ": [
+                "breast",
+                "breasts",
+                "chest"
+            ],
+            "modality": [
+                "MMG",
+                "Mammography",
+                "Mammogram",
+                "full-field digital",
+                "full-field digital MMG",
+                "full-field MMG",
+                "full-field Mammography",
+                "digital Mammography",
+                "digital MMG",
+                "x-ray mammography"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "image to image",
+                "image generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "CSAW"
+            ],
+            "augmentations": [
+                "resize"
+            ],
+            "generates": [
+                "full images",
+                "mammograms",
+                "full-field digital mammograms"
+            ],
+            "height": 1332,
+            "width": 800,
+            "depth": null,
+            "type": "CycleGAN",
+            "license": "BSD",
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Mammogram",
+                "Mammography",
+                "Digital Mammography",
+                "Full field Mammography",
+                "Full-field Mammography",
+                "CycleGANs",
+                "CycleGAN",
+                "Density",
+                "Breast Density",
+                "High Density",
+                "Low Density",
+                "ACR"
+            ],
+            "year": "2021"
+        },
+        "description": {
+            "title": "CycleGAN Model for Low-to-High Brest Density Mammograms Translation of MLO VIEW (Trained on CSAW)",
+            "provided_date": "2022",
+            "trained_date": "2022",
+            "provided_after_epoch": null,
+            "version": "0.0.1",
+            "publication": null,
+            "doi": [
+                "https://doi.org/10.48550/arXiv.2209.09809"
+            ],
+            "inputs": [
+                "input_path: default=models/00015_CYCLEGAN_MMG_DENSITY_CSAW_MLO/images, help=the path to .png mammogram images that are translated from low to high breast density or vice versa",
+                "image_size: default=[1332, 800], help=list with image height and width. Images are rescaled to these pixel dimensions.",
+                "gpu_id: default=0, help=the gpu to run the model on.",
+                "translate_all_images: default=False, help=flag to override num_samples in case the user wishes to translate all images in the specified input_path folder.",
+                "low_to_high: default=True, help=if true, breast density is added. If false, it is removed from the input image. A different generator of the cycleGAN is used based on this flag."
+            ],
+            "comment": "A cycle generative adversarial network (CycleGAN) that generates mammograms with high breast density from an original mammogram e.g. with low-breast density. The CycleGAN was trained using normal (without pathologies) digital mammograms from CSAW dataset (Dembrower et al., 2020, https://doi.org/10.1007/s10278-019-00278-0). The uploaded ZIP file contains the files CycleGAN_high_density.pth (model weights), __init__.py (image generation method and utils) and the GAN model architecture (in pytorch) below the /src folder."
+        }
+    },
+    "00016_CYCLEGAN_MMG_DENSITY_CSAW_CC": {
+        "execution": {
+            "package_name": "00016_CYCLEGAN_MMG_DENSITY_CSAW_CC",
+            "package_link": "https://zenodo.org/record/7093559/files/00016_CYCLEGAN_MMG_DENSITY_CSAW_CC.zip?download=1",
+            "model_name": "latest_net_G_A",
+            "extension": ".pth",
+            "image_size": [
+                1332,
+                800
+            ],
+            "dependencies": [
+                "numpy",
+                "Path",
+                "pyyaml",
+                "opencv-contrib-python-headless",
+                "torch",
+                "torchvision",
+                "dominate",
+                "visdom",
+                "Pillow"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "output_path",
+                        "save_images",
+                        "num_samples"
+                    ],
+                    "custom": {
+                        "translate_all_images": false,
+                        "input_path": "models/00016_CYCLEGAN_MMG_DENSITY_CSAW_CC/images",
+                        "image_size": [
+                            1332,
+                            800
+                        ],
+                        "gpu_id": 0,
+                        "low_to_high": true
+                    }
+                }
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 202,
+                "FID": 98.38,
+                "FID_ratio": 0.434,
+                "FID_RADIMAGENET": 2.71,
+                "FID_RADIMAGENET_ratio": 0.142,
+                "CLF_delta": null,
+                "SEG_delta": null,
+                "DET_delta": null,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "SEG": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                }
+            },
+            "use_cases": [
+                "classification",
+                "detection",
+                "domain-translation"
+            ],
+            "organ": [
+                "breast",
+                "breasts",
+                "chest"
+            ],
+            "modality": [
+                "MMG",
+                "Mammography",
+                "Mammogram",
+                "full-field digital",
+                "full-field digital MMG",
+                "full-field MMG",
+                "full-field Mammography",
+                "digital Mammography",
+                "digital MMG",
+                "x-ray mammography"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "image to image",
+                "image generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "CSAW"
+            ],
+            "augmentations": [
+                "resize"
+            ],
+            "generates": [
+                "full images",
+                "mammograms",
+                "full-field digital mammograms"
+            ],
+            "height": 1332,
+            "width": 800,
+            "depth": null,
+            "type": "CycleGAN",
+            "license": "BSD",
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Mammogram",
+                "Mammography",
+                "Digital Mammography",
+                "Full field Mammography",
+                "Full-field Mammography",
+                "CycleGANs",
+                "CycleGAN",
+                "Density",
+                "Breast Density",
+                "High Density",
+                "Low Density",
+                "ACR"
+            ],
+            "year": "2021"
+        },
+        "description": {
+            "title": "CycleGAN Model for Low-to-High Brest Density Mammograms Translation of CC VIEW (Trained on CSAW)",
+            "provided_date": "2022",
+            "trained_date": "2022",
+            "provided_after_epoch": null,
+            "version": "0.0.1",
+            "publication": null,
+            "doi": [
+                "https://doi.org/10.48550/arXiv.2209.09809"
+            ],
+            "inputs": [
+                "input_path: default=models/00016_CYCLEGAN_MMG_DENSITY_CSAW_CC/images, help=the path to .png mammogram images that are translated from low to high breast density or vice versa",
+                "image_size: default=[1332, 800], help=list with image height and width. Images are rescaled to these pixel dimensions.",
+                "gpu_id: default=0, help=the gpu to run the model on.",
+                "translate_all_images: default=False, help=flag to override num_samples in case the user wishes to translate all images in the specified input_path folder.",
+                "low_to_high: default=True, help=if true, breast density is added. If false, it is removed from the input image. A different generator of the cycleGAN is used based on this flag."
+            ],
+            "comment": "A cycle generative adversarial network (CycleGAN) that generates mammograms with high breast density from an original mammogram e.g. with low-breast density. The CycleGAN was trained using normal (without pathologies) digital mammograms from CSAW dataset (Dembrower et al., 2020, https://doi.org/10.1007/s10278-019-00278-0). The uploaded ZIP file contains the files CycleGAN_high_density.pth (model weights), __init__.py (image generation method and utils) and the GAN model architecture (in pytorch) below the /src folder."
+        }
+    },
+    "00017_DCGAN_XRAY_LUNG_NODULES": {
+        "execution": {
+            "package_name": "00017_DCGAN_NODE21",
+            "package_link": "https://zenodo.org/record/6943692/files/00017_DCGAN_NODE21.zip?download=1",
+            "model_name": "model",
+            "extension": ".pt",
+            "image_size": [
+                128,
+                128,
+                1
+            ],
+            "dependencies": [
+                "numpy",
+                "tqdm",
+                "torch"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "num_samples",
+                        "output_path",
+                        "save_images"
+                    ],
+                    "custom": {}
+                },
+                "input_latent_vector_size": 120
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 1476,
+                "FID": 126.78,
+                "FID_ratio": 0.192,
+                "FID_RADIMAGENET": null,
+                "FID_RADIMAGENET_ratio": null,
+                "CLF_delta": null,
+                "SEG_delta": null,
+                "DET_delta": null,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "SEG": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                }
+            },
+            "use_cases": [
+                "classification"
+            ],
+            "organ": [
+                "lung",
+                "chest",
+                "thorax"
+            ],
+            "modality": [
+                "x-ray",
+                "xray",
+                "CXR"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "noise to image",
+                "unconditional generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "Node21"
+            ],
+            "augmentations": [
+                "horizontal flip",
+                "vertical flip"
+            ],
+            "generates": [
+                "lung nodules",
+                "nodules",
+                "lung roi",
+                "lung region of interest",
+                "patches"
+            ],
+            "height": 128,
+            "width": 128,
+            "depth": 1,
+            "type": "DCGAN",
+            "license": "MIT",
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Thoracic xray",
+                "xray",
+                "x-ray",
+                "Thorax",
+                "Lung",
+                "Nodules",
+                "Lung Cancer",
+                "Lung Tumor"
+            ],
+            "year": "2022"
+        },
+        "description": {
+            "title": "DCGAN Model for Patch Generation of Lung Nodules (Trained on Node21)",
+            "provided_date": "June 2022",
+            "trained_date": "June 2022",
+            "provided_after_epoch": null,
+            "version": null,
+            "publication": null,
+            "doi": [],
+            "inputs": [],
+            "comment": "An unconditional deep convolutional generative adversarial network (DCGAN) that generates lung nodule regions-of-interest patches based on chest xray (CXR) images. The pixel dimension of the generated patches is 128x128. The WGANGP was trained on cropped patches from CXR images from the NODE21 dataset (Sogancioglu et al, 2021). The uploaded ZIP file contains the files model.pt (model weight), __init__.py (image generation method and utils), a requirements.txt, a LICENSE file, the MEDIGAN metadata.json file, the used GAN training config file, a test.sh file to run the model, and an /image folder with a few generated example images."
+        }
+    },
+    "00018_WGANGP_XRAY_LUNG_NODULES": {
+        "execution": {
+            "package_name": "00018_WGANGP_NODE21",
+            "package_link": "https://zenodo.org/record/6943762/files/00018_WGANGP_NODE21.zip?download=1",
+            "model_name": "model",
+            "extension": ".pt",
+            "image_size": [
+                128,
+                128,
+                1
+            ],
+            "dependencies": [
+                "numpy",
+                "tqdm",
+                "torch"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "num_samples",
+                        "output_path",
+                        "save_images"
+                    ],
+                    "custom": {}
+                },
+                "input_latent_vector_size": 100
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 1476,
+                "FID": 211.47,
+                "FID_ratio": 0.115,
+                "FID_RADIMAGENET": null,
+                "FID_RADIMAGENET_ratio": null,
+                "CLF_delta": null,
+                "SEG_delta": null,
+                "DET_delta": null,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "SEG": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                }
+            },
+            "use_cases": [
+                "classification"
+            ],
+            "organ": [
+                "lung",
+                "chest",
+                "thorax"
+            ],
+            "modality": [
+                "x-ray",
+                "xray",
+                "CXR"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "noise to image",
+                "unconditional generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "Node21"
+            ],
+            "augmentations": [
+                "horizontal flip",
+                "vertical flip"
+            ],
+            "generates": [
+                "lung nodules",
+                "nodules",
+                "lung roi",
+                "lung region of interest",
+                "patches"
+            ],
+            "height": 128,
+            "width": 128,
+            "depth": 1,
+            "type": "WGANGP",
+            "license": "MIT",
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Thoracic xray",
+                "xray",
+                "x-ray",
+                "Thorax",
+                "Lung",
+                "Nodules",
+                "Lung Cancer",
+                "Lung Tumor"
+            ],
+            "year": "2022"
+        },
+        "description": {
+            "title": "WGANGP Model for Patch Generation of Lung Nodules (Trained on Node21)",
+            "provided_date": "June 2022",
+            "trained_date": "June 2022",
+            "provided_after_epoch": null,
+            "version": null,
+            "publication": null,
+            "doi": [],
+            "inputs": [],
+            "comment": "An unconditional wasserstein generative adversarial network with gradient penalty (WGAN_GP) that generates lung nodule regions-of-interest patches based on chest xray (CXR) images. The pixel dimension of the generated patches is 128x128. The WGANGP was trained on cropped patches from CXR images from the NODE21 dataset (Sogancioglu et al, 2021). The uploaded ZIP file contains the files model.pt (model weight), __init__.py (image generation method and utils), a requirements.txt, a LICENSE file, the MEDIGAN metadata.json file, the used GAN training config file, a test.sh file to run the model, and an /image folder with a few generated example images."
+        }
+    },
+    "00019_PGGAN_CHEST_XRAY": {
+        "execution": {
+            "package_name": "00019_PGGAN_NODE21",
+            "package_link": "https://zenodo.org/record/7047097/files/00019_PGGAN_CHEST_XRAY.zip?download=1",
+            "model_name": "model",
+            "extension": ".pt",
+            "image_size": [
+                1024,
+                1024,
+                1
+            ],
+            "dependencies": [
+                "numpy",
+                "tqdm",
+                "torch"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "num_samples",
+                        "output_path",
+                        "save_images"
+                    ],
+                    "custom": {}
+                },
+                "input_latent_vector_size": 1024
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 1000,
+                "FID": 96.74,
+                "FID_ratio": 0.297,
+                "FID_RADIMAGENET": 0.77,
+                "FID_RADIMAGENET_ratio": 0.243,
+                "CLF_delta": null,
+                "SEG_delta": null,
+                "DET_delta": null,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "SEG": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                }
+            },
+            "use_cases": [
+                "classification",
+                "detection"
+            ],
+            "organ": [
+                "lung",
+                "chest",
+                "thorax"
+            ],
+            "modality": [
+                "x-ray",
+                "xray",
+                "CXR"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "noise to image",
+                "unconditional generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "Node21"
+            ],
+            "augmentations": [
+                "horizontal flip",
+                "vertical flip"
+            ],
+            "generates": [
+                "chest xray",
+                "CXR",
+                "thoracic xray",
+                "lung xray",
+                "lung xray"
+            ],
+            "height": 1024,
+            "width": 1024,
+            "depth": 1,
+            "type": "PGGAN",
+            "license": "MIT",
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Thoracic xray",
+                "xray",
+                "x-ray",
+                "Thorax",
+                "Lung",
+                "Nodules",
+                "Lung Cancer",
+                "Lung Tumor"
+            ],
+            "year": "2022"
+        },
+        "description": {
+            "title": "PGGAN Model for Generation of Chest XRAY (CXR) Images (Trained on the ChestX-ray14 Dataset)",
+            "provided_date": "June 2022",
+            "trained_date": "June 2022",
+            "provided_after_epoch": null,
+            "version": null,
+            "publication": null,
+            "doi": [],
+            "inputs": [],
+            "comment": "An unconditional Progressively-growing generative adversarial network (PGGAN) that generates chest xray (CXR) images with pixel dimensions 1024x1024. The PGGAN was trained on CXR images from the ChestX-ray14 dataset (Wang et al., 2017, Paper: https://arxiv.org/pdf/1705.02315.pdf, Data: https://nihcc.app.box.com/v/ChestXray-NIHCC). The uploaded ZIP file contains the files model.pt (model weight), __init__.py (image generation method and utils), a requirements.txt, a LICENSE file, the MEDIGAN metadata.json file, the used GAN training config file, a test.sh file to run the model, and an /image folder with a few generated example images."
+        }
+    },
+    "00020_PGGAN_CHEST_XRAY": {
+        "execution": {
+            "package_name": "00020_PGGAN_CHEST_XRAY",
+            "package_link": "https://zenodo.org/record/7047295/files/00020_PGGAN_CHEST_XRAY.zip?download=1",
+            "model_name": "Final_Full_Model",
+            "extension": ".pth",
+            "image_size": [
+                1024,
+                1024,
+                3
+            ],
+            "dependencies": [
+                "pytorch-lightning==1.2.10",
+                "torch",
+                "torchvision",
+                "matplotlib",
+                "pillow",
+                "numpy"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "num_samples",
+                        "output_path",
+                        "save_images"
+                    ],
+                    "custom": {
+                        "image_size": 1024,
+                        "resize_pixel_dim": null
+                    }
+                },
+                "input_latent_vector_size": 512
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 1000,
+                "FID": 52.17,
+                "FID_ratio": 0.543,
+                "FID_RADIMAGENET": 2.83,
+                "FID_RADIMAGENET_ratio": 0.071,
+                "CLF_delta": null,
+                "SEG_delta": null,
+                "DET_delta": null,
+                "CLF": {
+                    "trained_on_fake": {
+                        "AUC": 0.878
+                    },
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {
+                        "AUC": 0.947
+                    }
+                },
+                "SEG": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                }
+            },
+            "use_cases": [
+                "classification",
+                "detection"
+            ],
+            "organ": [
+                "lung",
+                "chest",
+                "thorax"
+            ],
+            "modality": [
+                "x-ray",
+                "xray",
+                "CXR"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "noise to image",
+                "unconditional generation",
+                "data augmentation"
+            ],
+            "condition": [],
+            "dataset": [
+                "ChestX-ray14"
+            ],
+            "augmentations": [],
+            "generates": [
+                "chest xray",
+                "CXR",
+                "thoracic xray",
+                "lung xray",
+                "lung xray"
+            ],
+            "height": 1028,
+            "width": 1028,
+            "depth": 3,
+            "type": "PGGAN",
+            "license": "MIT",
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Thoracic xray",
+                "xray",
+                "x-ray",
+                "Thorax",
+                "Lung",
+                "Nodules",
+                "Lung Cancer",
+                "Lung Tumor"
+            ],
+            "year": "2022"
+        },
+        "description": {
+            "title": "PGGAN Model for Generation of Chest XRAY (CXR) Images (Trained on ChestX-ray14 Dataset)",
+            "provided_date": "September 2022",
+            "trained_date": "2021",
+            "provided_after_epoch": null,
+            "version": null,
+            "publication": null,
+            "doi": [
+                "https://doi.org/10.1007/s42979-021-00720-7"
+            ],
+            "inputs": [
+                "image_size: default=1024, help=the size if height and width of the generated images",
+                "resize_pixel_dim: default=None, help=Resizing of generated images via the pillow PIL image library."
+            ],
+            "comment": "An unconditional Progressively-growing generative adversarial network (PGGAN) that generates chest xray (CXR) images with pixel dimensions 1024x1024. The PGGAN was trained on CXR images based on ChestX-ray14 dataset (Wang et al. 2017, Paper: https://arxiv.org/pdf/1705.02315.pdf, Data: https://nihcc.app.box.com/v/ChestXray-NIHCC). The uploaded ZIP file contains the model weights checkpoint file, __init__.py (image generation method and utils), a requirements.txt, the MEDIGAN metadata.json file, a test.sh file to run the model, and an /image folder with a few generated example images."
+        }
+    },
+    "00021_CYCLEGAN_BRAIN_MRI_T1_T2": {
+        "execution": {
+            "package_name": "00021_CYCLEGAN_BRAIN_MRI_T1_T2",
+            "package_link": "https://zenodo.org/record/7113464/files/00021_CYCLEGAN_BRAIN_MRI_T1_T2.zip?download=1",
+            "model_name": "netG_T1toT2_checkpoint",
+            "extension": ".pth.tar",
+            "image_size": [
+                "224",
+                "192"
+            ],
+            "dependencies": [
+                "matplotlib",
+                "Pillow",
+                "torch",
+                "torchvision"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "num_samples",
+                        "output_path",
+                        "save_images"
+                    ],
+                    "custom": {
+                        "input_path": "models/00021_CYCLEGAN_BRAIN_MRI_T1_T2/inputs/T1",
+                        "gpu_id": "0",
+                        "translate_all_images": false,
+                        "T1_to_T2": true
+                    }
+                }
+            }
+        },
+        "selection": {
+            "performance": {
+                "SSIM": null,
+                "MSE": null,
+                "NSME": null,
+                "PSNR": null,
+                "IS": null,
+                "turing_test": null,
+                "FID_no_images": 1000,
+                "FID": 59.49,
+                "FID_ratio": 0.410,
+                "FID_RADIMAGENET": 1.45,
+                "FID_RADIMAGENET_ratio": 0.014,
+                "CLF_delta": null,
+                "SEG_delta": null,
+                "DET_delta": null,
+                "CLF": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "SEG": {
+                    "trained_on_fake": {
+                        "dice": 0.712,
+                        "dice_tumor": 0.712,
+                        "dice_cochlea": 0.478
+                    },
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                },
+                "DET": {
+                    "trained_on_fake": {},
+                    "trained_on_real_and_fake": {},
+                    "trained_on_real": {}
+                }
+            },
+            "use_cases": [
+                "segmentation"
+            ],
+            "organ": [
+                "Brain"
+            ],
+            "modality": [
+                "T1",
+                "T2"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [],
+            "condition": [],
+            "dataset": [
+                "CrossMoDA 2021"
+            ],
+            "augmentations": [
+                "HorizontalFlip",
+                "Rotation"
+            ],
+            "generates": [
+                "Brain",
+                "2D",
+                "MRI",
+                "T1",
+                "T2"
+            ],
+            "height": 224.0,
+            "width": 192.0,
+            "depth": null,
+            "type": "CycleGAN",
+            "license": null,
+            "dataset_type": "public",
+            "privacy_preservation": null,
+            "tags": [
+                "Domain Adaptation",
+                "Brain MRI",
+                "Vestibular Schwanomma",
+                "Segmentation",
+                "Cross Modal Domain Translation"
+            ],
+            "year": 2021
+        },
+        "description": {
+            "title": "CycleGAN Brain MRI T1-T2 translation (trained on CrossMoDA 2021 dataset)",
+            "provided_date": "2022",
+            "trained_date": "2021",
+            "provided_after_epoch": 65,
+            "version": "1",
+            "publication": "BrainLes 2022 MICCAI workshop paper",
+            "doi": [
+                "10.1007/978-3-031-09002-8_47"
+            ],
+            "inputs": [
+                "input_path: default=models/00021_CYCLEGAN_BRAIN_MRI_T1_T2/inputs/T1, help=the path to .png brain MRI images that are translated from T1 to T2 or vice versa. ",
+                "image_size: default=[224, 192], help=list with image height and width. ",
+                "gpu_id: default=0, help=the gpu to run the model on.",
+                "translate_all_images: default=False, help=flag to override num_samples in case the user wishes to translate all images in the specified input_path folder.",
+                "T1_to_T2: default=True, help=if true, generator for T1 to T2 translation is used. If false, the translation is done from T2 to T1 instead. Need to adjust input path in this case e.g. models/00021_CYCLEGAN_BRAIN_MRI_T1_T2/inputs/T2 instead of models/00021_CYCLEGAN_BRAIN_MRI_T1_T2/inputs/T1. A different generator of the cycleGAN is used based on this flag."
+            ],
+            "comment": "In recent years, deep learning models have considerably advanced the performance of segmentation tasks on Brain Magnetic Resonance Imaging (MRI). However, these models show a considerable performance drop when they are evaluated on unseen data from a different distribution. Since annotation is often a hard and costly task requiring expert supervision, it is necessary to develop ways in which existing models can be adapted to the unseen domains without any additional labelled information. In this work, we explore one such technique which extends the CycleGAN [2] architecture to generate label-preserving data in the target domain. The synthetic target domain data is used to train the nn-UNet [3] framework for the task of multi-label segmentation. The experiments are conducted and evaluated on the dataset [1] provided in the ‘Cross-Modality Domain Adaptation for Medical Image Segmentation’ challenge [23] for segmentation of vestibular schwannoma (VS) tumour and cochlea on contrast enhanced (ceT1) and high resolution (hrT2) MRI scans. In the proposed approach, our model obtains dice scores (DSC) 0.73 and 0.49 for tumour and cochlea respectively on the validation set of the dataset. This indicates the applicability of the proposed technique to real-world problems where data may be obtained by different acquisition protocols as in [1] where hrT2 images are more reliable, safer, and lower-cost alternative to ceT1."
+        }
+    },
+    "00022_WGAN_CARDIAC_AGING": {
+        "execution": {
+            "package_name": "00022_WGAN_CARDIAC_AGING",
+            "package_link": "https://zenodo.org/record/7494368/files/00022_WGAN_CARDIAC_AGING.zip?download=1",
+            "model_name": "model",
+            "extension": ".ckpt",
+            "image_size": [
+                256,
+                256
+            ],
+            "dependencies": [
+                "nibabel==3.2.1",
+                "pytorch-lightning==1.4.7",
+                "pandas",
+                "comet-ml",
+                "monai<=1.0.1",
+                "grad-cam",
+                "matplotlib",
+                "monai[skimage]",
+                "munch==2.5.0",
+                "pillow>=7.0.0",
+                "ffmpeg-python==0.2.0",
+                "torchmetrics==0.6.0"
+            ],
+            "generate_method": {
+                "name": "generate",
+                "args": {
+                    "base": [
+                        "model_file",
+                        "output_path",
+                        "save_images",
+                        "num_samples"
+                    ],
+                    "custom": {
+                        "image_paths_input": [
+                            "models/00022_WGAN_CARDIAC_AGING/sample_image.png",
+                            "models/00022_WGAN_CARDIAC_AGING/sample_image.png",
+                            "models/00022_WGAN_CARDIAC_AGING/sample_image.png"
+                        ],
+                        "aging_input": [
+                            -4,
+                            10,
+                            2
+                        ],
+                        "data_type": "2d",
+                        "view": "la",
+                        "subcat": "2ch"
+                    }
+                }
+            }
+        },
+        "selection": {
+            "performance": {},
+            "use_cases": [
+                "classification",
+                "segmentation"
+            ],
+            "organ": [
+                "heart",
+                "chest"
+            ],
+            "modality": [
+                "MRI",
+                "Cardiac imaging",
+                "Cardiography",
+                "full-field digital"
+            ],
+            "vendors": [],
+            "centres": [],
+            "function": [
+                "image to image",
+                "image generation",
+                "data augmentation"
+            ],
+            "condition": [
+                "age"
+            ],
+            "dataset": [
+                "UK Biobank"
+            ],
+            "augmentations": [
+                "resize"
+            ],
+            "generates": [
+                "cardiac image",
+                "full-field digital"
+            ],
+            "height": 256,
+            "width": 256,
+            "depth": null,
+            "type": "pix2pix",
+            "license": null,
+            "dataset_type": "non-public",
+            "privacy_preservation": null,
+            "tags": [
+                "Cardiac imaging",
+                "pix2pix",
+                "Pix2Pix"
+            ],
+            "year": "2022"
+        },
+        "description": {
+            "title": "Generates cardiac images with age offset from real images (Trained on UK Biobank)",
+            "provided_date": "2022",
+            "trained_date": "2022",
+            "provided_after_epoch": 299,
+            "version": "0.0.1",
+            "publication": "https://www.frontiersin.org/articles/10.3389/fcvm.2022.983091",
+            "doi": [
+                ""
+            ],
+            "inputs": [
+                "input_image_paths: default=[\"models/00022_WGAN_CARDIAC_AGING/sample_image.png\"] help=List of image paths to apply aging.",
+                "aging_input: default=[-4] help=List of age offset values for each image.",
+                "data_type: default=\"2d\" help=",
+                "view: default=\"la\" help=",
+                "subcat: default=\"2ch\", help="
+            ],
+            "comment": "Conditional WGAN-GP Model for Cardiac Image generation with age offset (Trained on UK Biobank). A conditional wasserstein generative adversarial network with gradient penalty (WGAN_GP) that generates MRI cardiac images. The pixel dimension of the generated images is 256x256. The uploaded ZIP file contains the files model.ckpt (model weights), __init__.py (image generation method and utils), a requirements.txt, and the used GAN training config file. A sample_image.png is provided for example generation."
+        }
+    },
+    "00023_PIX2PIXHD_BREAST_DCEMRI": {
+         "execution": {
+            "package_name": "00023",
+            "package_link": "https://zenodo.org/records/10215478/files/00023.zip?download=1",
+            "model_name": "30_net_G",
+            "extension": ".pth",
+            "image_size": [
+               512, 512
+            ],
+            "dependencies": [
+               "numpy",
+               "torch",
+               "torchvision",
+               "pillow"
+            ],
+            "generate_method": {
+               "name": "generate",
+               "args": {
+                  "base": [
+                     "model_file",
+                     "num_samples",
+                     "output_path",
+                     "save_images"
+                  ],
+                  "custom": {
+                     "input_path": "input/",
+                     "image_size": "512",
+                     "gpu_id": "0"
+                  }
+               }
+            }
+         },
+         "selection": {
+            "performance": {
+               "SSIM": 0.726,
+               "MSE": 34.88,
+               "NSME": null,
+               "PSNR": 32.91,
+               "IS": null,
+               "FID": 28.71,
+               "turing_test": "",
+               "downstream_task": {
+                  "CLF": {
+                     "trained_on_fake": {
+                        "accuracy": null,
+                        "precision": null,
+                        "recall": null,
+                        "f1": null,
+                        "specificity": null,
+                        "AUROC": null,
+                        "AUPRC": null
+                     },
+                     "trained_on_real_and_fake": {},
+                     "trained_on_real": {}
+                  },
+                  "SEG": {
+                     "trained_on_fake": {
+                        "dice": 0.687,
+                        "jaccard": null,
+                        "accuracy": null,
+                        "precision": null,
+                        "recall": null,
+                        "f1": null
+                     },
+                     "trained_on_real_and_fake": {
+                        "dice": "0.797"
+                     },
+                     "trained_on_real": {
+                        "dice": "0.790"
+                     }
+                  }
+               }
+            },
+            "use_cases": [
+               "segmentation",
+               "tumour localization",
+               "classification",
+               "simulation"
+            ],
+            "organ": [
+               "breast"
+            ],
+            "modality": [
+               "dce-mri",
+               "mri",
+               "t1",
+               "t1-weighted",
+               "fat-saturated"
+            ],
+            "vendors": [],
+            "centres": [
+               "Duke Hospital"
+            ],
+            "function": [],
+            "condition": [],
+            "dataset": [
+               "DUKE"
+            ],
+            "augmentations": [],
+            "generates": [],
+            "height": 512,
+            "width": 512,
+            "depth": 1,
+            "type": "pix2pixHD",
+            "license": "BSD License",
+            "dataset_type": "DCE-MRI",
+            "privacy_preservation": "",
+            "tags": [
+               "dce-mri",
+               "postcontrast",
+               "synthesis",
+               "breast",
+               "mri",
+               "treatment",
+               "i2i",
+               "pix2pixHD",
+               "SPIE"
+            ],
+            "year": 2023
+         },
+         "description": {
+            "title": "Pre- to Post-Contrast Breast MRI Synthesis for Enhanced Tumour Segmentation",
+            "provided_date": "11.2023",
+            "trained_date": "2023",
+            "provided_after_epoch": 30,
+            "version": "1.0",
+            "publication": "https://doi.org/10.48550/arXiv.2311.10879",
+            "doi": [
+               "https://doi.org/10.48550/arXiv.2311.10879"
+            ],
+            "inputs": [
+                "input_path: default=input/, help=the path to .png breast DCE-MRI images that are translated from pre-contrast to the first DCE post-contrast sequence. ",
+                "image_size: default=[512, 512], help=list with image height and width. ",
+                "gpu_id: default=0, help=the gpu to run the model on."
+            ],
+            "comment": "Pix2Pix model for DCE-MRI slice generation from pre-contrast image input (Trained on Duke Breast MRI Dataset). A pix2pixHD mmodel that generates DCE-MRI axial slices based on checkpoint after 30 training epochs. \nThe pixel dimension of the generated images is 512x512. Several generated 2d slices can be merged together to create a 3D MRI volume with tumour tissue highlighted by synthetic contrast. \nThe uploaded ZIP file contains the files 30_net_G.pth (model weights), __init__.py (image generation method and utils), a requirements.txt, and further code below the /src folder for handling of model, data, and training utils. Sample input images are provided as an example for image generation."
+         }
+  }
+}
