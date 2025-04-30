@@ -3,3 +3,4 @@ data/
 output/
 models/
 polyp_samples/
+polyp_model.pth
